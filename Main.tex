@@ -1,9 +1,33 @@
-\documentclass{article}
+\documentclass[a4paper,oneside]{article}
 
+%%%%%%%% TEXT packages
 \usepackage{cmap}
 \usepackage[utf8]{inputenc}
 \usepackage[ukrainian]{babel}
 
+
+%% Packages for Graphics & Figures %%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[pdftex]{graphicx} %%For loading graphic files
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+%% Math Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+
+
+
+
+
 \begin{document}
-Diploma
+	\input{include/Title.tex}
 \end{document}
