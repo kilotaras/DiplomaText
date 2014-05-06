@@ -2,6 +2,7 @@
 
 %%%%%%%% TEXT packages
 \usepackage{cmap}
+\usepackage[T1,T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[ukrainian]{babel}
 
@@ -9,7 +10,7 @@
 %% Packages for Graphics & Figures %%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[pdftex]{graphicx} %%For loading graphic files
 
-\usepackage{hyperref}
+\usepackage[unicode]{hyperref}
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -29,5 +30,14 @@
 
 
 \begin{document}
+	\pagestyle{empty} %No headings for the first pages.
+
 	\input{include/Title.tex}
+	
+	\linespread{1.5}
+	\selectfont
+	\addtocounter{page}{1}
+	
+%	\input{include/Intro.tex}
+	\input{include/Problem.tex}
 \end{document}
