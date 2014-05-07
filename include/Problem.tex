@@ -21,7 +21,16 @@
 			v \in H^1 \Omega : v|_\Gamma = 0
 		\right\rbrace \\
 		
-		a_\Omega(w,v) := \int_\Omega
+		\quad a_\Omega(w,v) := \displaystyle\int_\Omega 
+		\left[
+			\mu \nabla w \nabla v +v \beta \nabla w + \sigma wv
+		\right] dx \\
+		
+		\qquad \left\langle l_\Omega, v \right\rangle := \displaystyle\int_\Omega fvdx \quad \forall v,w \in V \\
+		
+		\mbox{знайти }u \in V \mbox{ що} \\
+		
+		\qquad a_\Omega(w,v) = \left\langle l_\Omega, v \right\rangle \quad \forall v \in V
 		
 	\end{cases}
 \end{equation}
