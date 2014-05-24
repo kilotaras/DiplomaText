@@ -33,3 +33,16 @@ $
 		a_\Omega(u_h, v) = \langle l_\Omega, v \rangle \qquad \forall v \in V_h
 	\end{cases}
 \end{equation}
+
+Обравши деякий базис $\lbrace \phi_i(x)\rbrace_{i=1}^N$ з простору $V_h$ ми можемо конкретизувати задачу \ref{eq:general_discrete} до наступної форми
+
+\begin{equation}\label{eq:concrete_discrete}
+\begin{cases}
+	\text{для заданих } T_h = \lbrace K \rbrace \text{ і базису } \lbrace \phi_i(x)\rbrace_{i=1}^N \text{ з простору } V_h \subset V \\
+	\text{знайти коефіцієнти } q_m \in \R \text{ апроксимації } u_h(x) := \sum\limits_{m=1}^N q_m \phi_m (x) \in V_h, \text{що} \\
+	\sum\limits_{m=1}^N a_\Omega(\phi_m, \phi_i)q_m = \langle l_\Omega, \phi_i \rangle \qquad i = 1..N
+\end{cases}
+\end{equation}
+
+Таким чином процес Гальоркіна дає змогу знайти апроксимацію $u_h \in V_h$ задачі \ref{eq:general_variational},
+	а базис $\lbrace \phi_i(x)\rbrace_{i=1}^N$ можна обрати таким чином, який дасть змогу проводити ефективні обчислення.
