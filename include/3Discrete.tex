@@ -11,7 +11,25 @@ $
 має наступні властивості:
 
 \begin{equation}
-	\Omega =
+\begin{split}
+	& \Omega = \bigcup_{K \in T_h} K \\
+	& K \bigcap K^\prime = \emptyset \quad \forall K, K^\prime \in T_h : K \neq K^\prime \\
+	& \overline K \bigcap \overline {K^\prime} =
+	\begin{cases}
+		S := \mbox{\{спільне ребро\}} \\
+		A := \mbox{\{спільна вершина\}}  \\
+		\emptyset \\
+	\end{cases}
+\end{split}
 \end{equation}
 
+Після побудови певним чином скінченновимірного апроксимуючого простору $V_h \subset V$, $\mbox{dim} V_h = N(h) = N < + \infty$
+на тріангуляції $T_h = \lbrace K \rbrace$ ми можемо замінити задачу \ref{eq:general_variational} наступною задачою
 
+\begin{equation}\label{eq:general_discrete}
+	\begin{cases}
+		\mbox{для заданих } T_h = \{K\}, V_h  \subset V \\
+		\mbox{знайти } u_h \in V_h \mbox{, що} \\
+		a_\Omega(u_h, v) = \langle l_\Omega, v \rangle \qquad \forall v \in V_h
+	\end{cases}
+\end{equation}
