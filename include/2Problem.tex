@@ -39,13 +39,61 @@
 	а також $\mu = \left\lbrace \mu_{ij}(x) \right\rbrace_{i,j=1}^d$,
 	$\beta = \left\lbrace \beta_i(x) \right\rbrace_{i=1}^d$,
 	$\sigma = \sigma(x)$,
-	$f = f(x)$
+	$f = f(x)$ - задані функції, що
 
 
-%TODO: умови
+\begin{equation}
+	\begin{cases}
+		\mu_{ij}(x) = \mu_{ji}(x) \\
+			\sum \limits_{i,j=1}^d \mu_{ji}(x) \xi_i \xi_j
+				\ge
+			\mu_0 \sum \limits_{i=1}^d \xi_i^2 \quad
+			\mu_0 =\text{const} \quad \forall \xi_i \in \R \\
+		\nabla \cdot \beta(x) := \mathlarger{\sum \limits_{i=1}^d} \frac{\partial \beta_i(x)}{\partial x_i} = 0
+			\text{ майже скрізь в } \Omega
+	\end{cases}
+\end{equation}
+
+\begin{equation}
+	\mu_ij, \beta_i, \sigma \in L^\infty(\Omega), \quad f \in L^2(\Omega)
+\end{equation}
 
 При таких умовах білінійна форма $a_\Omega (\cdot,\cdot): V \times V  \to \R$ є неперевною, $V$-еліптичною і генерує енергетичну норму
 
 \begin{equation}\label{eq:energy_norm}
 	\norm{u}_v := \sqrt{a_\Omega(u,u)}
 \end{equation}
+
+\newcommand{\vonenorm}{\left|v\right|_{1,\Omega}}
+
+Норма \ref{eq:energy_norm} є еквівалентною до норми $\vonenorm = \sqrt{(\nabla v, \nabla v)}$
+
+\newcommand{\infnorm}[1]{\norm{#1}_\infty}
+
+\begin{equation}\label{eq:norm_equivalence}
+	\mu_0 \vonenorm^2 \le \norm{u}_v \le
+		\mu_0
+			\left[
+				\frac{\norm{\mu_0}_\infty}{\mu_0}+Pe(1+Sh)
+			\right]
+		\vonenorm^2
+\end{equation}
+
+Де
+
+\begin{equation}
+	Pe:= \frac{\infnorm{\beta} \text{ diam} \Omega}{\mu_0} \qquad
+	Sh:= \frac{\infnorm{\sigma} \text{ diam} \Omega}{\infnorm{\beta}}
+\end{equation}
+
+критерії Пекле і Струхаля.
+
+\begin{equation}
+	\begin{split}
+		\infnorm{\sigma} := ess \sup \limits_{x \in \Omega} |\sigma(x)| \\
+		\infnorm{\beta} := \sqrt{\sum \limits_{i=1}^d \infnorm{\beta_i}^2} \\
+		\infnorm{\mu} := \sqrt{\sum \limits_{i,j=1}^d \infnorm{\mu_{i,j}}^2}
+	\end{split}
+\end{equation}
+
+\undef{\vonenorm}
