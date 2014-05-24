@@ -1,0 +1,24 @@
+%!TEX root = Main.tex
+
+%page geometry and font size
+\usepackage[14pt]{extsizes}
+\usepackage[top=2cm,left=3cm,right=1.5cm,bottom=2cm]{geometry}
+
+%indents
+\usepackage{indentfirst}
+\setlength{\parindent}{1cm}
+
+%section style
+\usepackage{titlesec}
+\titleformat{\section}{\Large}{\thesection . }{0em}{\centering}[]
+
+%no additional numbers in TOC
+\setcounter{secnumdepth}{1}
+
+%insert figures at place
+\usepackage{float}
+
+
+%bibliography in TOC
+\usepackage{tocbibind}
+\renewcommand{\tocbibname}{Список використаної літератури}

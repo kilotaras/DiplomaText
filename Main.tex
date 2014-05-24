@@ -25,6 +25,7 @@
 \usepackage{amsfonts}
 
 
+\input{options.tex}
 \input{commands.tex}
 
 
@@ -38,6 +39,15 @@
 	\linespread{1.5}
 	\selectfont
 	\addtocounter{page}{1}
+
+	\section*{Зміст}
+
+	\makeatletter
+	\@starttoc{toc}
+	\makeatother
+
+	\newpage
+	\pagestyle{plain}
 
 	\input{include/1Intro.tex}
 	\input{include/2Problem.tex}
