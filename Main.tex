@@ -25,6 +25,7 @@
 \usepackage{amsfonts}
 
 \usepackage{relsize}
+\usepackage{import}
 
 \input{options.tex}
 \input{commands.tex}
@@ -50,16 +51,13 @@
 	\newpage
 	\pagestyle{plain}
 
-	\input{include/1Intro.tex}
-	\input{include/2Problem.tex}
-	\input{include/3Discrete.tex}
-	\input{include/4AppErrProp.tex}
-	\input{include/5AEEProblem.tex}
-	\section{Апостеріорний оцінювач на трикутнику}
-		\subsection{Лінійна МСЕ на трикутнику}
-		\subsection{Оцінювач на трикутнику}
-		\subsection{Знаходження значень оцінювач на трикутнику}
-		\subsection{Знаходження значень оцінювач на трикутнику}
+	\input{include/1Intro}
+	\input{include/2Problem}
+	\input{include/3Discrete}
+	\input{include/4AppErrProp}
+	\input{include/5AEEProblem}
+	\import{include/}{6AeeOnTriangle}
+
 	\section{Числові результати}
 		\subsection{Задача 1}
 		\subsection{Задача 2}
