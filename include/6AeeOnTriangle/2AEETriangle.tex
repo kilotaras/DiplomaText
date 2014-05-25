@@ -1,0 +1,62 @@
+%!TEX root = ../../Main.tex
+
+\subsection{Оцінювач на трикутнику}
+
+Щоб ефективно розв'язати задачу
+\eqref{eq:AEE_formulation} побудуємо базис $\lbrace \phi_{ij} \rbrace_{(i,j) \in S_m}$, так що
+
+\begin{equation}\label{eq:basis_properties}
+\begin{cases}
+	\phi_{ij} \in V \setminus V_h \\
+	\text{supp } \phi_{ij} = K \cup K^\prime, \quad K = A_iA_jA_k, \quad K^\prime = A_jA_iA_{k^\prime}
+\end{cases}
+\end{equation}
+
+Таким чином структура оцінювача похибки $e_h$ наступна
+
+\begin{equation}
+	e_h(x) := \sum \limits_{(i,j) \in S_m} \lambda_{ij} \phi_{ij}(x) \qquad \forall x \in \Omega
+\end{equation}
+
+з невідомими коефіцієнтами $\lambda_{ij}$.
+
+Функції $\phi_{ij}$ побудуємо наступним чином
+
+\begin{equation}
+	\phi_{ij}(x) =
+	\begin{cases}
+		L_i(x)L_j(x), &\quad \forall x \in K\\
+		L_i^\prime(x)L_j^\prime(x), &\quad \forall x \in K^\prime\\
+		0 &\quad \forall x \in \Omega \setminus (K \cup K^\prime)
+	\end{cases}
+\end{equation}
+
+\TODO{IMAGE}
+
+Таким чином отримали систему рівнянь
+
+\begin{equation}\label{eq:AEE_system}
+	\sum \limits_{q = (i,j) \in S_m} a_\Omega(\phi_q, \phi_t) \lambda_q = \langle \rho(u_h), \phi_t \rangle, \quad t = (i,j) \in S_m
+\end{equation}
+
+Для пришвидшення обчислень допустимо, що
+
+\begin{equation}
+	a_\Omega(\phi_q, \phi_t) \neq 0 \Rightarrow q = t
+\end{equation}
+
+Таким чином ми від системи \eqref{eq:AEE_system} переходимо до набору рівнянь
+
+\begin{equation}
+	\begin{split}
+		a_\Omega(\phi_q, \phi_q) \lambda_q = \langle \rho(u_h), \phi_q \rangle\\
+		\lambda_q = \frac{\langle \rho(u_h), \phi_q \rangle}{a_\Omega(\phi_q, \phi_q)}
+			= \frac{\langle l_\Omega, \phi_q\rangle - a_\Omega(u_h, \phi_q)}{a_\Omega(\phi_q, \phi_q)}
+	\end{split}
+	\quad q = (i,j) \in S_m
+\end{equation}
+
+Провіши необхідні обчислення отримуємо оцінювач похибки у вигляді
+\begin{equation}
+	e_h(x) := \sum \limits_{(i,j) \in S_m} \lambda_{ij} \phi_{ij}(x) \qquad \forall x \in \Omega
+\end{equation}

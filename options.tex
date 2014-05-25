@@ -2,7 +2,7 @@
 
 %page geometry and font size
 \usepackage[14pt]{extsizes}
-\usepackage[top=2cm,left=3cm,right=1.5cm,bottom=2cm]{geometry}
+\usepackage[top=2cm,left=3cm,right=1.75cm,bottom=2cm]{geometry}
 
 %indents
 \usepackage{indentfirst}
@@ -10,10 +10,11 @@
 
 %section style
 \usepackage{titlesec}
-\titleformat{\section}{\Large}{\thesection . }{0em}{\centering}[]
+\titleformat{\section}{\Large \bf}{\thesection .}{0.5em}{\centering}[]
+\titleformat{\subsection}{\large \bf}{$\qquad$\thesubsection}{0.5em}{}[]
 
 %no additional numbers in TOC
-\setcounter{secnumdepth}{1}
+\setcounter{secnumdepth}{2}
 
 %insert figures at place
 \usepackage{float}
