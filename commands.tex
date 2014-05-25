@@ -10,9 +10,16 @@
 
 
 \newcommand\sect[1]{
+  \clearpage
   \phantomsection
   \addcontentsline{toc}{section}{#1}
   \section*{#1}%
+}
+
+\newcommand\subsect[1]{
+  \phantomsection
+  \addcontentsline{toc}{subsection}{#1}
+  \subsection*{#1}%
 }
 
 \newcommand{\undef}[1]{\let#1\undefined}

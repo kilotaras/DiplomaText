@@ -134,3 +134,59 @@
 		&P[H_1, u_h]_i = \ln \frac{\ln{e_h^i}-\ln{e_h^{i-1}}}{\ln{N_{i-1}}-\ln{N_h}} \text{ - показник збіжності} \\
 	\end{split}
 \end{equation*}
+
+Наведемо також графік залежності норми похибок від кількості елементів.
+
+\begin{figure}[H]
+	\centering
+    \includegraphics[scale=0.65]{problem1/MY/Plotnb}
+    \caption{Залежність норм похибок від кількості елементів}
+    \label{fig:p1_my_errors}
+\end{figure}
+
+Якщо ж за основу для адаптивної стратегії взяти оцінювач \TODO{Ost-Shyn}, то таблиця обчислених результатів матиме вигляд.
+
+\pgfplotstabletypeset[col sep=comma,
+	columns/0/.style={
+		column name=\textnumero
+	},
+	columns/1/.style={
+		column name=$N(h)$
+	},
+	columns/2/.style={
+		column name=$M(h)$
+	},
+	columns/3/.style={
+		column name=$\norm{e_h}^\prime$
+	},
+	columns/4/.style={
+		column name=$\norm{e_h}$
+	},
+	columns/5/.style={
+		column name=$\norm{e}$
+	},
+	columns/6/.style={
+		column name=${P[H_1, u_h]}$
+	},
+	columns/7/.style={
+		column name=$\frac{\norm{e_h}}{\norm{e_h+u_h}}$
+	},
+%%
+	begin table=\begin{longtable},
+	end table=\end{longtable},
+%
+	every head row/.style={before row=\caption{Похибки та збіжність схеми}\\\toprule, after row=\midrule},
+	every last row/.style={after row=\bottomrule},
+	every nth row={1}{before row=\midrule},
+	column type/.add={|}{|}
+]{include/8NumResults/problem1/ost/errors/table.csv}
+
+Як бачимо схема доходить до сітки з вдвічі більшою кількістю елементів і незважачи на це знаходить розв'язок з більшою похибкою. Графік залежності похибки від кількості елементів має вигляд.
+
+
+\begin{figure}[H]
+	\centering
+    \includegraphics[scale=0.65]{problem1/ost/Plotnb}
+    \caption{Залежність норм похибок від кількості елементів}
+    \label{fig:p1_ost_errors}
+\end{figure}
