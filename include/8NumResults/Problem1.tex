@@ -115,15 +115,22 @@
 	columns/7/.style={
 		column name=$\frac{\norm{e_h}}{\norm{e_h+u_h}}$
 	},
-	every head row/.style={before row=\toprule, after row=\midrule},
+%%
+	begin table=\begin{longtable},
+	end table=\end{longtable},
+%
+	every head row/.style={before row=\caption{Похибки та збіжність схеми}\\\toprule, after row=\midrule},
 	every last row/.style={after row=\bottomrule},
 	every nth row={1}{before row=\midrule},
 	column type/.add={|}{|}
 ]{include/8NumResults/problem1/MY/errors/table.csv}
 
-
-Таблички
-
-моя
-
-остапова
+Тут
+\begin{equation*}
+	\begin{split}
+		&\norm{e_h^\prime} \text{ - оцінювач представлений в \TODO{REF} } \\
+		&\norm{e_h} \text{ - оцінювач представлений в даній роботі} \\
+		&\norm{e} \text{ - реальна похибка} \\
+		&P[H_1, u_h]_i = \ln \frac{\ln{e_h^i}-\ln{e_h^{i-1}}}{\ln{N_{i-1}}-\ln{N_h}} \text{ - показник збіжності} \\
+	\end{split}
+\end{equation*}
