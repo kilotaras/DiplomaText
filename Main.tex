@@ -34,6 +34,8 @@
 \usepackage{booktabs}
 \usepackage{longtable}
 
+\usepackage{cite}
+
 \input{options.tex}
 \input{commands.tex}
 
@@ -51,7 +53,7 @@
 	\pagestyle{plain}
 
 	\section*{Завдання}
-	\sect{Реферат}
+	\section*{Реферат}
 	\clearpage
 	\section*{Зміст}
 
@@ -59,6 +61,7 @@
 	\@starttoc{toc}
 	\makeatother
 
+	\sect{Умовні позначення}
 
 	\input{include/1Intro}
 	\input{include/2Problem}
@@ -69,14 +72,13 @@
 	\input{include/7Adaptation}
 	\import{include/}{8NumResults}
 
-	\sect{Висновки}
+	\section{ОХОРОНА ПРАЦІ ТА БЕЗПЕКА В НАДЗВИЧАЙНИХ СИТУАЦІЯХ}
 
-	\nocite{*}
+	\sect{Висновки}
 
 	\clearpage
 	\bibliography{bibliography}{}
 	\bibliographystyle{ugost2008ls}
 
-	\sect{Додатки}
-		\subsect{Додаток про охорону праці}
+
 \end{document}
