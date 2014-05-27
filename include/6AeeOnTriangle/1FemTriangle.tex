@@ -1,26 +1,25 @@
 %!TEX root = ../../Main.tex
 \subsection{Лінійні апроксимації МСЕ на трикутнику}
 
-Допустимо, що область $\Omega \subset \R^2$ точок $x = (x_1, x_2)$ розділена на скінченні елементи $K = A_iA_jA_k$,
+Допустимо, що область $\Omega \subset \R^2$ точок $x = (x_1, x_2)$ розділена на скінченні трикутні елементи $K = A_iA_jA_k$,
 	так що отримана тріангуляція $T_h = \lbrace K \rbrace$ задовільняє
 \eqref{eq:split_properties}.
-Позначимо $A_h = \lbrace A_i \rbrace_{i=1}^n$ і $E_h = \lbrace S_m \rbrace$ множини вершин $A_i := (x_1^i, x_2^i)$ та ребер $S_m$ відповідно.
+Позначимо $A_h = \lbrace A_i \rbrace_{i=1}^n$ і $E_h = \lbrace S_{ij} \rbrace$ множини вершин $A_i := (x_1^i, x_2^i)$ та ребер $S_{ij} = (A_i, A_j)$ відповідно.
 
-Допустимо, що отримана апроксимація
+Допустимо, що шукана апроксимація
 \begin{equation}
 	u_h \in V_h := \left\lbrace v \in C(\Omega) : v|_K \in P_1(k) \quad \forall K \in T_h \right\rbrace
 \end{equation}
-
-розв'язку задачі
-\eqref{eq:general_variational} має вигляд
-
-\begin{equation}
+%
+розв'язку задачі \eqref{eq:general_variational} має вигляд
+%
+\begin{equation}\label{eq:appr_kind}
 	u_h(x)|_K = \sum \limits_{m=i,j,k} u_m L_m (x) \qquad \forall x=(x_1, x_2) \in K \quad \forall K \in T_h
 \end{equation}
-
+%
 де $P_1(K)$ - множина поліномів першого ступеня на трикутнику $K$, а $L_m = L_m(x)$ -
-	бароцентричні координати трикутника $K = A_i A_j A_k$ (див. \autoref{fig:barycentric_coordinates})
-
+	барицентричні координати трикутника $K = A_i A_j A_k$ (див. \autoref{fig:barycentric_coordinates})
+%
 \begin{equation}\label{eq:barycentric_coord}
 	\begin{cases}
 		L_i(x) = \frac{a_i + b_i x_1 + c_i x_2}{2 |K|} \\
@@ -34,10 +33,10 @@
 			i \to j \to k \to i
 	\end{cases}
 \end{equation}
-
+%
 \begin{figure}[H]
 	\centering
     \includegraphics[scale=0.5]{images/barycentric}
-    \caption{Бароцентричні координати}%графік одноі зі
+    \caption{Графік однієї із барицентричних координат}
     \label{fig:barycentric_coordinates}
 \end{figure}

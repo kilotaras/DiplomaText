@@ -7,14 +7,14 @@
 Після цього можна ущільнити на знайдених елементах сітку і знову застосувати схему МСЕ.
 
 Для початку природнім чином визначимо похибку на кожному скінченному елементі:
-
+%
 \newcommand{\error}[1]{\lambda_{#1} \phi_{#1}(x)}
 \begin{equation}\label{eq:error_element}
 	e_h(x)|_K = \error{ij}+\error{jk}+\error{ki} \qquad K = A_iA_jA_k
 \end{equation}
 
 Тоді, як показник якості розв'язку на трикутнику виберемо
-
+%
 \begin{equation}\label{eq:error_indicator}
 	\text{ind}_K = \sqrt{n \frac
 			{\norm{e_h}^2_{H(K)}}

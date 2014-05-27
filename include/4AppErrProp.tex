@@ -4,14 +4,14 @@
 
 Враховуючи
 \eqref{eq:general_variational} та дискретизовану версію
-\eqref{eq:general_discrete} ми отримуємо наступну задачу
-
+\eqref{eq:general_discrete} ми отримуємо наступну задачу:
+%
 \begin{equation}\label{eq:AE_problem}
 	\begin{cases}
 		\mbox{для заданого } T_h=\{K\} \text{, і відповідного наближення } u_h \in V_h \\
-		\text{знайти похибку } e:=u-u_h \in E := V \setminus V_h \text{ що} \\
-		a_\Omega(e,v) = \langle\rho(u_h), v\rangle \qquad \qquad \forall v \in E \text{ де}\\
-		\langle\rho(w), v\rangle := \langle l_\Omega, v\rangle - a_\Omega(w, v) \quad \forall w,v \in V
+		\text{знайти похибку } e:=u-u_h \in E := V \setminus V_h \text{, таку що} \\
+		a_\Omega(e,v) = \langle\rho(u_h), v\rangle \qquad \qquad \forall v \in E \text{, де}\\
+		\langle\rho(w), v\rangle := \langle l_\Omega, v\rangle - a_\Omega(w, v) \quad \forall w,v \in V.
 	\end{cases}
 \end{equation}
 
@@ -22,8 +22,8 @@
 		= a_\Omega(u,v)-a_\Omega(u_h, v) = a_\Omega(u-u_h, v)
 \end{equation*}
 
-Можна показати \colorbox{red}{REFENCE}, що
-
+Можна показати \cite{kvasnyca2002}, що
+%
 \begin{equation}\label{eq:residual_properties}
 	\begin{split}
 		\langle\rho(u_h), v\rangle = a_\Omega(u-u_h, v) = 0 \quad \forall v \in V_h \subset V \\
