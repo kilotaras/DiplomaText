@@ -34,8 +34,13 @@
 \usepackage{booktabs}
 \usepackage{longtable}
 
+\usepackage{textcase}
+
 \usepackage{cite}
+
 \usepackage{pdfpages}
+\usepackage{lastpage}
+\usepackage{totcount}
 
 \input{options.tex}
 \input{commands.tex}
@@ -50,7 +55,6 @@
 
 	\linespread{1.5}
 	\selectfont
-	\addtocounter{page}{1}
 	\pagestyle{plain}
 
 	\input{include/0Referat}
@@ -74,7 +78,7 @@
 
 	\input{include/9Protection}
 
-	\sect{Висновки}
+	\input{include/10Results}
 
 	\clearpage
 	\bibliography{bibliography}{}
