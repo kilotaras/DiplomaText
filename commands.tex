@@ -1,0 +1,27 @@
+%!TEX root = Main.tex
+
+
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\newcommand{\R}{\mathbb{R}}
+
+% 1.1, 1.2, 2.1, ...
+\numberwithin{equation}{section}
+
+
+\newcommand\sect[1]{
+  \clearpage
+  \phantomsection
+  \addcontentsline{toc}{section}{#1}
+  \section*{#1}%
+}
+
+\newcommand\subsect[1]{
+  \phantomsection
+  \addcontentsline{toc}{subsection}{#1}
+  \subsection*{#1}%
+}
+
+\newcommand{\undef}[1]{\let#1\undefined}
+
+\newcommand{\TODO}[1]{\colorbox{red}{TODO: #1}}

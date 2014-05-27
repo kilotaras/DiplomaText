@@ -1,0 +1,47 @@
+%!TEX root = ../Main.tex
+
+\section{Апостеріорна оцінка похибки}
+
+Для розв'язку задачі
+\eqref{eq:AE_problem} використаємо процес Гальоркіна, вибравши певний скінченновимірний простір $E_h \subset E$
+%
+\begin{equation}\label{eq:AEE_formulation}
+	\begin{cases}
+		\mbox{для заданого } T_h=\{K\} \text{, і відповідного наближення } u_h \in V_h \\
+		\text{та підпростору } E_h \subset E:=V \setminus V_h, \quad \text{dim} E_h = M(h) < +\infty \\
+		\text{знайти оцінку } e_h \in E_h \text{, таку що} \\
+		a_\Omega(e,v) = \langle\rho(u_h), v\rangle \qquad \forall v \in E_h
+	\end{cases}
+\end{equation}
+
+Задача \eqref{eq:AEE_formulation} коректно поставлена і її розв'язок $e_h \in E_h$ володіє наступними властивостями \cite{OstShynAee11}:
+%
+\begin{equation}
+	\begin{split}
+		\norm{e_h}_V^2 = a_\Omega(e_h, e_h) = \langle\rho(u_h), e_h\rangle \le \\
+		\le \norm{\rho(u_h)}_* \norm{e_h}_V \le \norm{u-u_h}_V \norm{e_h}_V
+	\end{split}
+\end{equation}
+%
+тобто
+%
+\begin{equation}
+	\norm{e_h}_V \le \norm{u-u_h}_V \quad \forall h > 0
+\end{equation}
+
+Обираючи базис $\lbrace \phi_i(x)\rbrace_{i=1}^M \subset E_h$ ми конкретизуємо задачу
+\eqref{eq:AE_problem} до алгебраїчного представлення
+%
+\begin{equation}
+	\begin{cases}
+		\text{для заданих } T_h = \lbrace K \rbrace \text{ і базису } \lbrace \phi_i(x)\rbrace_{i=1}^N \text{ з простору } E_h \subset E\\
+		\text{знайти коефіцієнти } \lambda_m \in \R \text{ лінійної комбінації } \\
+			\qquad \qquad \qquad e_h(x) := \sum\limits_{m=1}^M \lambda_m \phi_m (x) \in E_h, \text{ що} \\
+		\sum\limits_{m=1}^M a_\Omega(\phi_m, \phi_i)\lambda_m = \langle \rho(u_h), \phi_i \rangle \qquad i = 1..M(h)
+	\end{cases}
+\end{equation}
+
+Очевидно, що якість отриманого оцінювача $e_h \in E_h$ напряму залежить від повноти простору $E_h \subset E$ та ефективності обрахунків.
+Ефективність досягається завдяки схемі скінченних елементів, що дає змогу вибрати базис близький до ортогонального.
+
+Далі ми будуємо чисельну схему, що задовільняє ці критерії у 2D випадку ($d=2$).

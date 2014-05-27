@@ -1,0 +1,84 @@
+\documentclass[a4paper,oneside]{article}
+
+%%%%%%%% TEXT packages
+\usepackage{cmap}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ukrainian]{babel}
+
+
+%% Packages for Graphics & Figures %%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[pdftex]{graphicx} %%For loading graphic files
+
+\usepackage[unicode]{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+%% Math Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+\usepackage{relsize}
+\usepackage{import}
+
+\usepackage{textcomp}
+
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.10}
+\usepackage{booktabs}
+\usepackage{longtable}
+
+\usepackage{cite}
+\usepackage{pdfpages}
+
+\input{options.tex}
+\input{commands.tex}
+
+
+
+
+\begin{document}
+	\pagestyle{empty} %No headings for the first pages.
+
+	\input{include/0Title.tex}
+
+	\linespread{1.5}
+	\selectfont
+	\addtocounter{page}{1}
+	\pagestyle{plain}
+
+	\input{include/0Referat}
+	\clearpage
+	\section*{Зміст}
+
+	\makeatletter
+	\@starttoc{toc}
+	\makeatother
+
+	\sect{Умовні позначення}
+
+	\input{include/1Intro}
+	\input{include/2Problem}
+	\input{include/3Discrete}
+	\input{include/4AppErrProp}
+	\input{include/5AEEProblem}
+	\import{include/}{6AeeOnTriangle}
+	\input{include/7Adaptation}
+	\import{include/}{8NumResults}
+
+	\section{ОХОРОНА ПРАЦІ ТА БЕЗПЕКА В НАДЗВИЧАЙНИХ СИТУАЦІЯХ}
+
+	\sect{Висновки}
+
+	\clearpage
+	\bibliography{bibliography}{}
+	\bibliographystyle{ugost2008ls}
+
+
+\end{document}
