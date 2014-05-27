@@ -4,34 +4,32 @@
 
 Нехай $\Omega$ - область в Евклідовому просторі $\R^d$ з неперервним краєм $\Gamma \equiv \delta \Omega$, що задовільняє умову Ліпшица.
 
-Розглянемо крайову задачу
-
+Розглянемо крайову задачу та її варіаційне формулювання
+%
 \begin{equation}\label{eq:general_boundary}
 	\begin{cases}
-			- \nabla [\mu \nabla u] + \beta \nabla u + &\sigma u = f  \\
+			- \nabla \mu \nabla u + \beta \cdot \nabla u + &\sigma u = f  \\
 			&u|_\Gamma = 0
 	\end{cases}
 \end{equation}
-
-її варіаційне формулювання буде наступним:
-
+%
 \begin{equation}\label{eq:general_variational}
 	\begin{cases}
 		\mbox{для } V := H_0^1 \left( \Omega \right) =
 		\left\lbrace
 			v \in H^1 \Omega : v|_\Gamma = 0
-		\right\rbrace \\
+		\right\rbrace, \\
 
 		\quad a_\Omega(w,v) := \displaystyle\int_\Omega
 		\left[
 			\mu \nabla w \nabla v +v \beta \nabla w + \sigma wv
-		\right] dx \\
+		\right] dx, \\
 
 		\qquad \left\langle l_\Omega, v \right\rangle := \displaystyle\int_\Omega fvdx \quad \forall v,w \in V \\
 
-		\mbox{знайти }u \in V \mbox{ що} \\
+		\mbox{знайти }u \in V \mbox{, таку що} \\
 
-		\qquad a_\Omega(w,v) = \left\langle l_\Omega, v \right\rangle \quad \forall v \in V
+		\qquad a_\Omega(w,v) = \left\langle l_\Omega, v \right\rangle \quad \forall v \in V.
 
 	\end{cases}
 \end{equation}
@@ -40,27 +38,27 @@
 	а також $\mu = \left\lbrace \mu_{ij}(x) \right\rbrace_{i,j=1}^d$,
 	$\beta = \left\lbrace \beta_i(x) \right\rbrace_{i=1}^d$,
 	$\sigma = \sigma(x)$,
-	$f = f(x)$ - задані функції, що
-
-
+	$f = f(x)$ - задані функції, такі що
+%
+%
 \begin{equation}
 	\begin{cases}
-		\mu_{ij}(x) = \mu_{ji}(x) \\
+		\mu_{ij}(x) = \mu_{ji}(x) ,\\
 			\sum \limits_{i,j=1}^d \mu_{ji}(x) \xi_i \xi_j
 				\ge
 			\mu_0 \sum \limits_{i=1}^d \xi_i^2 \quad
-			\mu_0 =\text{const} \quad \forall \xi_i \in \R \\
+			\mu_0 =\text{const} \quad \forall \xi_i \in \R ,\\
 		\nabla \cdot \beta(x) := \mathlarger{\sum \limits_{i=1}^d} \frac{\partial \beta_i(x)}{\partial x_i} = 0
-			\text{ майже скрізь в } \Omega
+			\text{ майже скрізь в } \Omega.
 	\end{cases}
 \end{equation}
-
+%
 \begin{equation}\label{eq:coef_spaces}
 	\mu_ij, \beta_i, \sigma \in L^\infty(\Omega), \quad f \in L^2(\Omega)
 \end{equation}
-
-При таких умовах білінійна форма $a_\Omega (\cdot,\cdot): V \times V  \to \R$ є неперервною, $V$-еліптичною і генерує енергетичну норму
-
+%
+При таких умовах білінійна форма $a_\Omega (\cdot,\cdot): V \times V  \to \R$ є неперервною, $V$-еліптичною і генерує енергетичну норму \cite{kozarevska2002}
+%
 \begin{equation}\label{eq:energy_norm}
 	\norm{u}_v := \sqrt{a_\Omega(u,u)}
 \end{equation}
@@ -68,9 +66,9 @@
 \newcommand{\vonenorm}{\left|v\right|_{1,\Omega}}
 
 Норма \eqref{eq:energy_norm} є еквівалентною до норми $\vonenorm = \sqrt{(\nabla v, \nabla v)}$
-
+%
 \newcommand{\infnorm}[1]{\norm{#1}_\infty}
-
+%
 \begin{equation}\label{eq:norm_equivalence}
 	\mu_0 \vonenorm^2 \le \norm{u}_v \le
 		\mu_0
@@ -81,14 +79,14 @@
 \end{equation}
 
 Де
-
+%
 \begin{equation}
 	Pe:= \frac{\infnorm{\beta} \text{ diam} \Omega}{\mu_0} \qquad
 	Sh:= \frac{\infnorm{\sigma} \text{ diam} \Omega}{\infnorm{\beta}}
 \end{equation}
-
+%
 критерії Пекле і Струхаля.
-
+%
 \begin{equation}
 	\begin{split}
 		\infnorm{\sigma} := ess \sup \limits_{x \in \Omega} |\sigma(x)| \\
