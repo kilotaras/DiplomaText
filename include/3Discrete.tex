@@ -12,49 +12,50 @@ $
 %
 \begin{equation}\label{eq:split_properties}
 \begin{split}
-	& \Omega = \bigcup_{K \in T_h} K \\
-	& K \bigcap K^\prime = \emptyset \quad \forall K, K^\prime \in T_h : K \neq K^\prime \\
+	& \Omega = \bigcup_{K \in T_h} K, \\
+	& K \bigcap K^\prime = \emptyset \quad \forall K, K^\prime \in T_h : K \neq K^\prime, \\
 	& \overline K \bigcap \overline {K^\prime} =
 	\begin{cases}
-		S := \mbox{\{спільне ребро\}} \\
-		A := \mbox{\{спільна вершина\}}  \\
-		\emptyset \\
+		S := \mbox{\{спільне ребро\}}, \\
+		A := \mbox{\{спільна вершина\}},  \\
+		\emptyset. \\
 	\end{cases}
 \end{split}
 \end{equation}
 
 Після побудови певним чином скінченновимірного простору апроксимацій $V_h \subset V$, $\mbox{dim} V_h = N(h) = N < + \infty$
 на розбитті $T_h = \lbrace K \rbrace$ ми можемо замінити задачу
-\eqref{eq:general_variational} наступною задачою:
+\eqref{eq:general_variational} наступною задачею:
 %%
 \begin{equation}\label{eq:general_discrete}
 	\begin{cases}
 		\mbox{для заданого } T_h = \{K\}, V_h  \subset V \\
 		\mbox{знайти } u_h \in V_h \mbox{, що} \\
-		a_\Omega(u_h, v) = \langle l_\Omega, v \rangle \qquad \forall v \in V_h
+		a_\Omega(u_h, v) = \langle l_\Omega, v \rangle, \qquad \forall v \in V_h.
 	\end{cases}
 \end{equation}
 
-Обравши деякий базис $\lbrace \phi_i(x)\rbrace_{i=1}^N$ з простору $V_h$ ми можемо конкретизувати задачу
-\eqref{eq:general_discrete} до наступної форми
+Обравши деякий базис $\lbrace \phi_i(x)\rbrace_{i=1}^N$ з простору $V_h$, ми можемо конкретизувати задачу
+\eqref{eq:general_discrete} до наступної форми:
 %
 \begin{equation}\label{eq:concrete_discrete}
 \begin{cases}
 	\text{для заданих } T_h = \lbrace K \rbrace \text{ і базису } \lbrace \phi_i(x)\rbrace_{i=1}^N \text{ з простору } V_h \subset V \\
 	\text{знайти коефіцієнти } q_m \in \R \text{ апроксимації } \\
 		\qquad u_h(x) := \sum\limits_{m=1}^N q_m \phi_m (x) \in V_h, \text{ такі що} \\
-	\sum\limits_{m=1}^N a_\Omega(\phi_m, \phi_i)q_m = \langle l_\Omega, \phi_i \rangle \qquad i = 1,\dots,N
+	\sum\limits_{m=1}^N a_\Omega(\phi_m, \phi_i)q_m = \langle l_\Omega, \phi_i \rangle, \qquad i = 1,\dots,N.
 \end{cases}
 \end{equation}
 
-Отримана система рівнянь буде додатньо визначеною, тому задача \eqref{eq:general_discrete} - коректно поставлена \cite{OstShynAee11}. Таким чином процес Гальоркіна дає змогу знайти апроксимацію $u_h \in V_h$ задачі
-\eqref{eq:general_variational}. Базис $\lbrace \phi_i(x)\rbrace_{i=1}^N$ можна обрати так, що він дасть змогу ефективно проводити обчислення.
+Отримана система рівнянь буде додатньо визначеною, тому задача \eqref{eq:general_discrete} - коректно поставлена \cite{OstShynAee11}.
+Таким чином, процес Гальоркіна дає змогу знайти апроксимацію $u_h \in V_h$ задачі \eqref{eq:general_variational}.
+Базис $\lbrace \phi_i(x)\rbrace_{i=1}^N$ можна обрати так, що він дасть змогу ефективно проводити обчислення.
 
 
 Якщо ми маємо апроксимацію $u_h \in V_h$, то важливим є аналіз похибки
 %
 \begin{equation}
-	e(x) := u(x) - u_h(x) = u(x) - \sum\limits_{m=1}^N q_m \phi_m (x) \qquad \forall x \in \Omega
+	e(x) := u(x) - u_h(x) = u(x) - \sum\limits_{m=1}^N q_m \phi_m (x), \qquad \forall x \in \Omega.
 \end{equation}
 %
 Сучасні методи такого аналізу включають в себе апостеріорні оцінювачі похибки, шо дають змогу побудувати критерій покращення точності.

@@ -2,13 +2,13 @@
 
 \subsection{Задача 1}
 
-Розглянемо задачу
+Розглянемо задачу:
 %%%
 \begin{equation}\label{eq:problem1}
 \begin{cases}
-	- \Delta u(x_1,x_2) + 1000u(x_1, x_2) = f(x,y) \\
-	f(x,y) = (18 \pi^2 +1000)\sin(3 \pi x) \sin (3 \pi y) \\
-	u|_\Gamma = 0 \\
+	- \Delta u(x_1,x_2) + 1000u(x_1, x_2) = f(x,y), \\
+	f(x,y) = (18 \pi^2 +1000)\sin(3 \pi x) \sin (3 \pi y), \\
+	u|_\Gamma = 0 ,\\
 	\Gamma = \left[0;1\right] \times \left[0;1\right]
 \end{cases}
 \end{equation}
@@ -19,46 +19,46 @@
 	u(x,y) = \sin(3 \pi x) \sin (3 \pi y)
 \end{equation}
 %%
-вигляд якого зображений на \autoref{plot:problem1_exact}
+зображений на \autoref{plot:problem1_exact}.
 %%
 \begin{figure}[H]
 	\centering
     \includegraphics[scale=1.0]{problem1/ExactSolution}
-    \caption{Точний розв'язок задачі \eqref{eq:problem1}}
+    \caption{Точний розв'язок задачі \eqref{eq:problem1}.}
     \label{plot:problem1_exact}
 \end{figure}
 %%%
 Задамо граничну точність апроксимації на скінченному елементі в 5\%.
-В якості початкового розбиття виберемо рівномірне на сітці 10x10 (\autoref{fig:init_mesh1}).
+За початкове розбиття виберемо рівномірне на сітці 10x10 (\autoref{fig:init_mesh1}).
 %%
 \begin{figure}[H]
 	\centering
     \includegraphics[scale=0.7]{problem1/InitialMesh}
-    \caption{Початкове розбиття схеми}
+    \caption{Початкове розбиття схеми.}
     \label{fig:init_mesh1}
 \end{figure}
 
 
-Графіки обчисленого наближення зображені на \autoref{fig:p1_solution1}-\ref{fig:p1_solution18}
+Графіки обчисленого наближення зображені на \autoref{fig:p1_solution1}-\ref{fig:p1_solution18}:
 %
 \begin{figure}[H]
 	\centering
     \includegraphics[scale=0.9]{problem1/my/solutions/1}
-    \caption{Перший крок. Кількість скінченних елементів - 400}
+    \caption{Перший крок. Кількість скінченних елементів - 400.}
     \label{fig:p1_solution1}
 \end{figure}
 %
 \begin{figure}[H]
 	\centering
     \includegraphics[scale=0.7]{problem1/my/solutions/5}
-    \caption{5-ий крок. Кількість скінченних елементів - 12903}
+    \caption{5-ий крок. Кількість скінченних елементів - 12903.}
     \label{fig:p1_solution5}
 \end{figure}
 %
 \begin{figure}[H]
 	\centering
     \includegraphics[scale=0.7]{problem1/my/solutions/18}
-    \caption{18-ий крок. Кількість скінченних елементів - 19322}
+    \caption{18-ий крок. Кількість скінченних елементів - 19322.}
     \label{fig:p1_solution18}
 \end{figure}
 %
@@ -68,25 +68,25 @@
 \begin{figure}[H]
 	\centering
     \includegraphics[scale=0.8]{problem1/my/AEE/1}
-    \caption{Перший крок. Кількість скінченних елементів - 400}
+    \caption{Перший крок. Кількість скінченних елементів - 400.}
     \label{fig:p1_aee1}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
     \includegraphics[scale=0.85]{problem1/my/AEE/5}
-    \caption{5-ий крок. Кількість скінченних елементів - 12903}
+    \caption{5-ий крок. Кількість скінченних елементів - 12903.}
     \label{fig:p1_aee5}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
     \includegraphics[scale=0.85]{problem1/my/AEE/18}
-    \caption{18-ий крок. Кількість скінченних елементів - 19322}
+    \caption{18-ий крок. Кількість скінченних елементів - 19322.}
     \label{fig:p1_aee18}
 \end{figure}
 
-З \autoref{fig:p1_aee18} бачимо, що отримане розбиття характеризується, тим що похибка розділена майже рівномірно по всіх скінченних елементах.
+З \autoref{fig:p1_aee18} бачимо, що отримане розбиття характеризується тим, що похибка розділена майже рівномірно по всіх скінченних елементах.
 %
 Нижче в таблиці наведено числові результати роботи схеми.
 %
@@ -120,19 +120,19 @@
 	begin table=\begin{longtable},
 	end table=\end{longtable},
 %
-	every head row/.style={before row=\caption{Похибки та збіжність схеми}\\\toprule, after row=\midrule},
+	every head row/.style={before row=\caption{Похибки та збіжність схеми.}\\\toprule, after row=\midrule},
 	every last row/.style={after row=\bottomrule},
 	every nth row={1}{before row=\midrule},
 	column type/.add={|}{|}
 ]{include/8NumResults/problem1/my/errors/table.csv}
 %
-Тут
+Тут:
 \begin{equation*}
 	\begin{split}
-		&\norm{e_h^\prime} \text{ - оцінювач представлений в \cite{OstShynAee11} } \\
-		&\norm{e_h} \text{ - оцінювач представлений в даній роботі} \\
-		&\norm{e} \text{ - реальна похибка} \\
-		&P[H_1, u_h]_i = \ln \frac{\ln{e_h^i}-\ln{e_h^{i-1}}}{\ln{N_{i-1}}-\ln{N_h}} \text{ - показник збіжності} \\
+		&\norm{e_h^\prime} \text{ - оцінювач представлений в \cite{OstShynAee11}, } \\
+		&\norm{e_h} \text{ - оцінювач представлений в даній роботі,} \\
+		&\norm{e} \text{ - реальна похибка,} \\
+		&P[H_1, u_h]_i = \ln \frac{\ln{e_h^i}-\ln{e_h^{i-1}}}{\ln{N_{i-1}}-\ln{N_h}} \text{ - показник збіжності.} \\
 	\end{split}
 \end{equation*}
 %
@@ -141,11 +141,11 @@
 \begin{figure}[H]
 	\centering
     \includegraphics[width=\textwidth]{problem1/my/Plotnb}
-    \caption{Збіжність норм похибок із збільшенням кількості елементів}
+    \caption{Збіжність норм похибок із збільшенням кількості елементів.}
     \label{fig:p1_my_errors}
 \end{figure}
 %
-Якщо ж за основу для адаптивної стратегії взяти оцінювач з \cite{OstShynAee11}, то таблиця обчислених результатів матиме вигляд.
+Якщо ж за основу для адаптивної стратегії взяти оцінювач з \cite{OstShynAee11}, то таблиця обчислених результатів матиме вигляд:
 %
 \pgfplotstabletypeset[col sep=comma,
 	columns={0,1,2,3,5,6,7,4},
@@ -177,7 +177,7 @@
 	begin table=\begin{longtable},
 	end table=\end{longtable},
 %
-	every head row/.style={before row=\caption{Похибки та збіжність схеми}\\\toprule, after row=\midrule},
+	every head row/.style={before row=\caption{Похибки та збіжність схеми.}\\\toprule, after row=\midrule},
 	every last row/.style={after row=\bottomrule},
 	every nth row={1}{before row=\midrule},
 	column type/.add={|}{|}
@@ -189,11 +189,11 @@
 \begin{figure}[H]
 	\centering
     \includegraphics[width=\textwidth]{problem1/ost/Plotnb}
-    \caption{Збіжність норм похибок із збільшенням кількості елементів}
+    \caption{Збіжність норм похибок із збільшенням кількості елементів.}
     \label{fig:p1_ost_errors}
 \end{figure}
 
-Як бачимо на розглянутій задачі оцінювач запропонований в роботі досягає кращої точності (0.25 проти 0.33), використовуючи вдвічі меншу кількість елементів (19,322 проти 43,399).
+Як бачимо на розглянутій задачі оцінювач, запропонований в роботі досягає кращої точності (0.25 проти 0.33), використовуючи вдвічі меншу кількість елементів (19,322 проти 43,399).
 
-На більшій кількості елементів якість отриманої оцінки вища ніж оцінка отримана в \cite{OstShynAee11},
+На більшій кількості елементів якість отриманої оцінки вища, ніж оцінки отриманої в \cite{OstShynAee11},
 навіть якщо за основу для адаптації вибрано оцінювач $e_h^\prime$, що добре видно на \autoref{fig:p1_ost_errors}.

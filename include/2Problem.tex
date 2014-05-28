@@ -8,8 +8,8 @@
 %
 \begin{equation}\label{eq:general_boundary}
 	\begin{cases}
-			- \nabla (\mu \nabla u) + \beta \cdot \nabla u + &\sigma u = f  \\
-			&u|_\Gamma = 0
+			- \nabla (\mu \nabla u) + \beta \cdot \nabla u + &\sigma u = f,  \\
+			&u|_\Gamma = 0.
 	\end{cases}
 \end{equation}
 %
@@ -46,8 +46,8 @@
 		\mu_{ij}(x) = \mu_{ji}(x) ,\\
 			\sum \limits_{i,j=1}^d \mu_{ij}(x) \xi_i \xi_j
 				\ge
-			\mu_0 \sum \limits_{i=1}^d \xi_i^2 \quad
-			\mu_0 =\text{const} \quad \forall \xi_i \in \R ,\\
+			\mu_0 \sum \limits_{i=1}^d \xi_i^2, \quad
+			\mu_0 =\text{const}, \quad \forall \xi_i \in \R ,\\
 		\nabla \cdot \beta(x) := \mathlarger{\sum \limits_{i=1}^d} \frac{\partial \beta_i(x)}{\partial x_i} = 0
 			\text{ майже скрізь в } \Omega.
 	\end{cases}
@@ -65,7 +65,7 @@
 
 \newcommand{\vonenorm}{\left|v\right|_{1,\Omega}}
 
-Норма \eqref{eq:energy_norm} є еквівалентною до норми $\vonenorm = \sqrt{(\nabla v, \nabla v)}$
+Норма \eqref{eq:energy_norm} є еквівалентною до норми $\vonenorm = \sqrt{(\nabla v, \nabla v)}$ :
 %
 \newcommand{\infnorm}[1]{\norm{#1}_\infty}
 %
@@ -75,13 +75,13 @@
 			\left[
 				\frac{\norm{\mu_0}_\infty}{\mu_0}+Pe(1+Sh)
 			\right]
-		\vonenorm^2
+		\vonenorm^2 ,
 \end{equation}
-
-Де
+%
+де
 %
 \begin{equation}
-	Pe:= \frac{\infnorm{\beta} \text{ diam} \Omega}{\mu_0} \qquad
+	Pe:= \frac{\infnorm{\beta} \text{ diam} \Omega}{\mu_0}, \qquad
 	Sh:= \frac{\infnorm{\sigma} \text{ diam} \Omega}{\infnorm{\beta}}
 \end{equation}
 %
@@ -89,15 +89,15 @@
 %
 \begin{equation}
 	\begin{split}
-		\infnorm{\sigma} := ess \sup \limits_{x \in \Omega} |\sigma(x)| \\
-		\infnorm{\beta} := \sqrt{\sum \limits_{i=1}^d \infnorm{\beta_i}^2} \\
-		\infnorm{\mu} := \sqrt{\sum \limits_{i,j=1}^d \infnorm{\mu_{i,j}}^2}
+		\infnorm{\sigma} := ess \sup \limits_{x \in \Omega} |\sigma(x)|; \\
+		\infnorm{\beta} := \sqrt{\sum \limits_{i=1}^d \infnorm{\beta_i}^2}; \\
+		\infnorm{\mu} := \sqrt{\sum \limits_{i,j=1}^d \infnorm{\mu_{i,j}}^2}.
 	\end{split}
 \end{equation}
 
 \undef{\vonenorm}
 
 Згідно з
-\eqref{eq:coef_spaces} лінійний функціонал $l : V \to R$ є неперервним.
+\eqref{eq:coef_spaces} лінійний функціонал $l : V \to \R$ є неперервним.
 Тому згідно теореми Лакса-Мільграма-Вишика задача
 \eqref{eq:general_variational} коректно поставлена. Вона має єдиний розв'язок $u \in V$, що неперервно залежить від вхідних даних.

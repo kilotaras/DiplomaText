@@ -4,18 +4,18 @@
 
 Враховуючи
 \eqref{eq:general_variational} та дискретизовану версію
-\eqref{eq:general_discrete} ми отримуємо наступну задачу:
+\eqref{eq:general_discrete}, ми отримуємо наступну задачу:
 %
 \begin{equation}\label{eq:AE_problem}
 	\begin{cases}
 		\mbox{для заданого } T_h=\{K\} \text{, і відповідного наближення } u_h \in V_h \\
 		\text{знайти похибку } e:=u-u_h \in E := V \setminus V_h \text{, таку що} \\
-		a_\Omega(e,v) = \langle\rho(u_h), v\rangle \qquad \qquad \forall v \in E \text{, де}\\
-		\langle\rho(w), v\rangle := \langle l_\Omega, v\rangle - a_\Omega(w, v) \quad \forall w,v \in V.
+		a_\Omega(e,v) = \langle\rho(u_h), v\rangle, \qquad \qquad \forall v \in E \text{, де}\\
+		\langle\rho(w), v\rangle := \langle l_\Omega, v\rangle - a_\Omega(w, v), \quad \forall w,v \in V.
 	\end{cases}
 \end{equation}
 
-Залишок $\langle\rho(u_h), v\rangle$ можна записати наступним чином
+Залишок $\langle\rho(u_h), v\rangle$ можна записати наступним чином:
 \begin{equation*}
 	\langle\rho(u_h), v\rangle
 		= \langle l_\Omega, v\rangle - a_\Omega(u_h, v)
@@ -26,17 +26,17 @@
 %
 \begin{equation}\label{eq:residual_properties}
 	\begin{split}
-		\langle\rho(u_h), v\rangle = a_\Omega(u-u_h, v) = 0 \quad \forall v \in V_h \subset V \\
-		\langle\rho(u_h), u-u_h\rangle = a_\Omega(u-u_h, u-u_h) = \norm{u-u_h}^2_V \\
+		\langle\rho(u_h), v\rangle = a_\Omega(u-u_h, v) = 0 \quad \forall v \in V_h \subset V ;\\
+		\langle\rho(u_h), u-u_h\rangle = a_\Omega(u-u_h, u-u_h) = \norm{u-u_h}^2_V ;\\
 		\norm{\rho(u_h)}_* = \sup \limits_{v \ne 0 \in V} \frac{|\langle\rho(u_h), v\rangle|}{\norm{v}_V} =
-			\sup \limits_{v \ne 0 \in V} \frac{a_\Omega(u-u_h, v)}{\norm{v}_V} \le \norm{u-u_h}_V
+			\sup \limits_{v \ne 0 \in V} \frac{a_\Omega(u-u_h, v)}{\norm{v}_V} \le \norm{u-u_h}_V .
 	\end{split}
 \end{equation}
 
 З
 \eqref{eq:residual_properties} слідує, що норма залишку еквівалента енергетичній нормі МСЕ
 \begin{equation}
-	\norm{\rho(u_h)}_* = \norm{u-u_h}_V
+	\norm{\rho(u_h)}_* = \norm{u-u_h}_V.
 \end{equation}
 
 
