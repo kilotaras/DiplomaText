@@ -114,7 +114,7 @@
 		column name=${P[H_1, u_h]}$
 	},
 	columns/7/.style={
-		column name=$\frac{\norm{e_h}}{\norm{e_h+u_h}}$
+		column name=$\frac{\norm{e_h}}{\norm{e_h+u_h}}*100\%$
 	},
 %%
 	begin table=\begin{longtable},
@@ -132,7 +132,7 @@
 		&\norm{e_h^\prime} \text{ - оцінювач представлений в \cite{OstShynAee11}, } \\
 		&\norm{e_h} \text{ - оцінювач представлений в даній роботі,} \\
 		&\norm{e} \text{ - реальна похибка,} \\
-		&P[H_1, u_h]_i = \ln \frac{\ln{e_h^i}-\ln{e_h^{i-1}}}{\ln{N_{i-1}}-\ln{N_h}} \text{ - показник збіжності.} \\
+		&P[H_1, u_h]_i = \ln \frac{\ln{e_h^i}-\ln{e_h^{i-1}}}{\ln{N_{i-1}}-\ln{N_i}} \text{ - показник збіжності.} \\
 	\end{split}
 \end{equation*}
 %
@@ -171,7 +171,7 @@
 		column name=${P[H_1, u_h]}$
 	},
 	columns/7/.style={
-		column name=$\frac{\norm{e_h^\prime}}{\norm{e_h^\prime+u_h}}$
+		column name=$\frac{\norm{e_h^\prime}}{\norm{e_h^\prime+u_h}}*100\%$
 	},
 %%
 	begin table=\begin{longtable},
@@ -193,7 +193,7 @@
     \label{fig:p1_ost_errors}
 \end{figure}
 
-Як бачимо на розглянутій задачі оцінювач, запропонований в роботі досягає кращої точності (0.25 проти 0.33), використовуючи вдвічі меншу кількість елементів (19,322 проти 43,399).
+Як бачимо на розглянутій задачі оцінювач, запропонований в роботі досягає кращої точності (0.25 проти 0.33), використовуючи вдвічі меншу кількість елементів (19 322 проти 43 399).
 
 На більшій кількості елементів якість отриманої оцінки вища, ніж оцінки отриманої в \cite{OstShynAee11},
 навіть якщо за основу для адаптації вибрано оцінювач $e_h^\prime$, що добре видно на \autoref{fig:p1_ost_errors}.
