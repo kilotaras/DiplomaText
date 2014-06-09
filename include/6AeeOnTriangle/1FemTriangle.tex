@@ -6,12 +6,12 @@
 \eqref{eq:split_properties}.
 Позначимо $A_h = \lbrace A_i \rbrace_{i=1}^n$ і $E_h = \lbrace S_{ij} \rbrace$ множини вершин $A_i := (x_1^i, x_2^i)$ та ребер $S_{ij} = (A_i, A_j)$ відповідно.
 
-Допустимо, що шукана апроксимація
+Будемо шукати апроксимацію
 \begin{equation}
 	u_h \in V_h := \left\lbrace v \in C(\Omega) : v|_K \in P_1(K), \quad \forall K \in T_h \right\rbrace
 \end{equation}
 %
-розв'язку задачі \eqref{eq:general_variational} має вигляд
+розв'язку задачі \eqref{eq:general_variational} у вигляді
 %
 \begin{equation}\label{eq:appr_kind}
 	u_h(x)|_K = \sum \limits_{m=i,j,k} u_m L_m (x), \qquad \forall x=(x_1, x_2) \in K, \quad \forall K \in T_h,

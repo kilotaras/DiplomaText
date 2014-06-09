@@ -15,14 +15,14 @@
 %
 \begin{equation}\label{eq:general_variational}
 	\begin{cases}
-		\mbox{для } V := H_0^1 \left( \Omega \right) =
+		\mbox{Для } V := H_0^1 \left( \Omega \right) =
 		\left\lbrace
 			v \in H^1 \Omega : v|_\Gamma = 0
 		\right\rbrace, \\
 
 		\quad a_\Omega(w,v) := \displaystyle\int_\Omega
 		\left[
-			\mu \nabla w \nabla v +v \beta \nabla w + \sigma wv
+			\mu \nabla w \nabla v +\beta v \nabla w + \sigma wv
 		\right] dx, \\
 
 		\qquad \left\langle l_\Omega, v \right\rangle := \displaystyle\int_\Omega fvdx \quad \forall v,w \in V \\
@@ -54,7 +54,7 @@
 \end{equation}
 %
 \begin{equation}\label{eq:coef_spaces}
-	\mu_ij, \beta_i, \sigma \in L^\infty(\Omega), \quad f \in L^2(\Omega)
+	\mu_{ij}, \beta_i, \sigma \in L^\infty(\Omega), \quad f \in L^2(\Omega)
 \end{equation}
 %
 При таких умовах білінійна форма $a_\Omega (\cdot,\cdot): V \times V  \to \R$ є неперервною від вхідних даних, $V$-еліптичною і генерує енергетичну норму \cite{kozarevska2002}
@@ -65,7 +65,7 @@
 
 \newcommand{\vonenorm}{\left|v\right|_{1,\Omega}}
 
-Норма \eqref{eq:energy_norm} є еквівалентною до норми $\vonenorm = \sqrt{(\nabla v, \nabla v)}$ :
+Норма \eqref{eq:energy_norm} є еквівалентною до норми $\vonenorm = \sqrt{(\nabla v, \nabla v)}$ \cite{OstShynAee11} :
 %
 \newcommand{\infnorm}[1]{\norm{#1}_\infty}
 %
@@ -73,7 +73,7 @@
 	\mu_0 \vonenorm^2 \le \norm{u}_V \le
 		\mu_0
 			\left[
-				\frac{\norm{\mu_0}_\infty}{\mu_0}+Pe(1+Sh)
+				\frac{\norm{\mu}_\infty}{\mu_0}+Pe(1+Sh)
 			\right]
 		\vonenorm^2 ,
 \end{equation}
@@ -85,13 +85,13 @@
 	Sh:= \frac{\infnorm{\sigma} \text{ diam} \Omega}{\infnorm{\beta}}
 \end{equation}
 %
-критерії Пекле і Струхаля.
+критерії Пекле і Струхаля. Тут
 %
 \begin{equation}
 	\begin{split}
-		\infnorm{\sigma} := ess \sup \limits_{x \in \Omega} |\sigma(x)|; \\
-		\infnorm{\beta} := \sqrt{\sum \limits_{i=1}^d \infnorm{\beta_i}^2}; \\
-		\infnorm{\mu} := \sqrt{\sum \limits_{i,j=1}^d \infnorm{\mu_{i,j}}^2}.
+		\infnorm{\sigma} := ess \sup \limits_{x \in \Omega} |\sigma(x)|, \\
+		\infnorm{\beta} := \sqrt{\sum \limits_{i=1}^d \infnorm{\beta_i}^2}, \\
+		\infnorm{\mu} := \sqrt{\sum \limits_{i,j=1}^d \infnorm{\mu_{ij}}^2}.
 	\end{split}
 \end{equation}
 

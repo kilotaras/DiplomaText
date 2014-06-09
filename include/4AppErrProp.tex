@@ -19,15 +19,15 @@
 \begin{equation*}
 	\langle\rho(u_h), v\rangle
 		= \langle l_\Omega, v\rangle - a_\Omega(u_h, v)
-		= a_\Omega(u,v)-a_\Omega(u_h, v) = a_\Omega(u-u_h, v)
+		= a_\Omega(u,v)-a_\Omega(u_h, v) = a_\Omega(u-u_h, v).
 \end{equation*}
 
 Можна показати \cite{kvasnyca2002}, що
 %
 \begin{equation}\label{eq:residual_properties}
 	\begin{split}
-		\langle\rho(u_h), v\rangle = a_\Omega(u-u_h, v) = 0 \quad \forall v \in V_h \subset V ;\\
-		\langle\rho(u_h), u-u_h\rangle = a_\Omega(u-u_h, u-u_h) = \norm{u-u_h}^2_V ;\\
+		\langle\rho(u_h), v\rangle = a_\Omega(u-u_h, v) = 0, \quad \forall v \in V_h \subset V,\\
+		\langle\rho(u_h), u-u_h\rangle = a_\Omega(u-u_h, u-u_h) = \norm{u-u_h}^2_V,\\
 		\norm{\rho(u_h)}_* = \sup \limits_{v \ne 0 \in V} \frac{|\langle\rho(u_h), v\rangle|}{\norm{v}_V} =
 			\sup \limits_{v \ne 0 \in V} \frac{a_\Omega(u-u_h, v)}{\norm{v}_V} \le \norm{u-u_h}_V .
 	\end{split}

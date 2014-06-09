@@ -9,7 +9,7 @@
 	- \Delta u(x_1,x_2) + 1000u(x_1, x_2) = f(x,y), \\
 	f(x,y) = (18 \pi^2 +1000)\sin(3 \pi x) \sin (3 \pi y), \\
 	u|_\Gamma = 0 ,\\
-	\Gamma = \left[0;1\right] \times \left[0;1\right]
+	\Omega = \left[0;1\right] \times \left[0;1\right]
 \end{cases}
 \end{equation}
 %%%
@@ -24,7 +24,7 @@
 \begin{figure}[H]
 	\centering
     \includegraphics[scale=1.0]{problem1/ExactSolution}
-    \caption{Точний розв'язок задачі \eqref{eq:problem1}.}
+    \caption{Точний розв'язок задачі \eqref{eq:problem1}. $u(x,y) = \sin(3 \pi x) \sin (3 \pi y)$}
     \label{plot:problem1_exact}
 \end{figure}
 %%%
@@ -34,31 +34,31 @@
 \begin{figure}[H]
 	\centering
     \includegraphics[scale=0.7]{problem1/InitialMesh}
-    \caption{Початкове розбиття схеми.}
+    \caption{Початкове розбиття на скінченні елементи.}
     \label{fig:init_mesh1}
 \end{figure}
 
 
-Графіки обчисленого наближення зображені на \autoref{fig:p1_solution1}-\ref{fig:p1_solution18}:
+Для отримання такої похибки знадобилося 18 кроків та \nn{19322} скінченних елементи. Графіки апроксимацій на різних кроках обчислення зображені на \autoref{fig:p1_solution1}-\ref{fig:p1_solution18}:
 %
 \begin{figure}[H]
 	\centering
     \includegraphics[scale=0.9]{problem1/my/solutions/1}
-    \caption{Перший крок. Кількість скінченних елементів - 400.}
+    \caption{$u_h(x)$ на першому кроці. Кількість скінченних елементів - \nn{400}.}
     \label{fig:p1_solution1}
 \end{figure}
 %
 \begin{figure}[H]
 	\centering
     \includegraphics[scale=0.7]{problem1/my/solutions/5}
-    \caption{5-ий крок. Кількість скінченних елементів - 12903.}
+    \caption{$u_h(x)$ на 5-му кроці. Кількість скінченних елементів - \nn{12903}.}
     \label{fig:p1_solution5}
 \end{figure}
 %
 \begin{figure}[H]
 	\centering
     \includegraphics[scale=0.7]{problem1/my/solutions/18}
-    \caption{18-ий крок. Кількість скінченних елементів - 19322.}
+    \caption{$u_h(x)$ на 18-му кроці. Кількість скінченних елементів - \nn{19322}.}
     \label{fig:p1_solution18}
 \end{figure}
 %
@@ -68,27 +68,27 @@
 \begin{figure}[H]
 	\centering
     \includegraphics[scale=0.8]{problem1/my/AEE/1}
-    \caption{Перший крок. Кількість скінченних елементів - 400.}
+    \caption{Індикатори похибки на першому кроці. Кількість скінченних елементів - \nn{400}.}
     \label{fig:p1_aee1}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
     \includegraphics[scale=0.85]{problem1/my/AEE/5}
-    \caption{5-ий крок. Кількість скінченних елементів - 12903.}
+    \caption{Індикатори похибки на 5-му кроці. Кількість скінченних елементів - \nn{12903}.}
     \label{fig:p1_aee5}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
     \includegraphics[scale=0.85]{problem1/my/AEE/18}
-    \caption{18-ий крок. Кількість скінченних елементів - 19322.}
+    \caption{Індикатори похибки на 18-му кроці. Кількість скінченних елементів - \nn{19322}.}
     \label{fig:p1_aee18}
 \end{figure}
 
 З \autoref{fig:p1_aee18} бачимо, що отримане розбиття характеризується тим, що похибка розділена майже рівномірно по всіх скінченних елементах.
-%
-Нижче в таблиці наведено числові результати роботи схеми.
+
+Нижче в таблиці наведено деякі показники отриманих розбиття та наближень на кроках адапативної схеми.
 %
 \pgfplotstabletypeset[col sep=comma,
 	columns={0,1,2,4,5,6,7,3},
@@ -129,14 +129,14 @@
 Тут:
 \begin{equation*}
 	\begin{split}
-		&\norm{e_h^\prime} \text{ - оцінювач представлений в \cite{OstShynAee11}, } \\
-		&\norm{e_h} \text{ - оцінювач представлений в даній роботі,} \\
+		&\norm{e_h^\prime} \text{ - оцінювач похибки представлений в \cite{OstShynAee11}, } \\
+		&\norm{e_h} \text{ - оцінювач похибки представлений в даній роботі,} \\
 		&\norm{e} \text{ - реальна похибка,} \\
 		&P[H_1, u_h]_i = \ln \frac{\ln{e_h^i}-\ln{e_h^{i-1}}}{\ln{N_{i-1}}-\ln{N_i}} \text{ - показник збіжності.} \\
 	\end{split}
 \end{equation*}
 %
-Наведемо також графік збіжності норм похибок.
+Всі норми обраховано в $H_1(\Omega)$. Наведемо також графік збіжності норм похибок.
 %
 \begin{figure}[H]
 	\centering
@@ -193,7 +193,7 @@
     \label{fig:p1_ost_errors}
 \end{figure}
 
-Як бачимо на розглянутій задачі оцінювач, запропонований в роботі досягає кращої точності (0.25 проти 0.33), використовуючи вдвічі меншу кількість елементів (19 322 проти 43 399).
+Як бачимо на розглянутій задачі оцінювач, запропонований в роботі, досягає кращої точності (норма похибки 0.25 проти 0.33), використовуючи вдвічі меншу кількість елементів (\nn{19322} проти \nn{43399}) порівняно із оцінювачем з \cite{OstShynAee11}.
 
 На більшій кількості елементів якість отриманої оцінки вища, ніж оцінки отриманої в \cite{OstShynAee11},
 навіть якщо за основу для адаптації вибрано оцінювач $e_h^\prime$, що добре видно на \autoref{fig:p1_ost_errors}.
