@@ -1,89 +1,89 @@
-\documentclass[a4paper,oneside]{article}
+\documentclass[12pt]{beamer}
 
-%%%%%%%% TEXT packages
-\usepackage{cmap}
-\usepackage[utf8]{inputenc}
-\usepackage[T1,T2A]{fontenc}
-\usepackage[ukrainian]{babel}
+% %%%%%%%% TEXT packages
+% \usepackage{cmap}
+% \usepackage[utf8]{inputenc}
+% \usepackage[T1,T2A]{fontenc}
+% \usepackage[ukrainian]{babel}
 
 
-%% Packages for Graphics & Figures %%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[pdftex]{graphicx} %%For loading graphic files
+% %% Packages for Graphics & Figures %%%%%%%%%%%%%%%%%%%%%%%%%%
+% \usepackage[pdftex]{graphicx} %%For loading graphic files
 
-\usepackage[unicode]{hyperref}
-\hypersetup{
-    colorlinks,
-    citecolor=black,
-    filecolor=black,
-    linkcolor=black,
-    urlcolor=black
-}
+% \usepackage[unicode]{hyperref}
+% \hypersetup{
+%     colorlinks,
+%     citecolor=black,
+%     filecolor=black,
+%     linkcolor=black,
+%     urlcolor=black
+% }
 
-%% Math Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{amsfonts}
+% %% Math Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \usepackage{amsmath}
+% \usepackage{amsthm}
+% \usepackage{amsfonts}
 
-\usepackage{relsize}
-\usepackage{import}
+% \usepackage{relsize}
+% \usepackage{import}
 
-\usepackage{textcomp}
+% \usepackage{textcomp}
 
-\usepackage{pgfplotstable}
-\pgfplotsset{compat=1.10}
-\usepackage{booktabs}
-\usepackage{longtable}
+% \usepackage{pgfplotstable}
+% \pgfplotsset{compat=1.10}
+% \usepackage{booktabs}
+% \usepackage{longtable}
 
-\usepackage{textcase}
+% \usepackage{textcase}
 
-\usepackage{cite}
+% \usepackage{cite}
 
-\usepackage{pdfpages}
-\usepackage{lastpage}
-\usepackage{totcount}
+% \usepackage{pdfpages}
+% \usepackage{lastpage}
+% \usepackage{totcount}
 
-\input{options.tex}
-\input{commands.tex}
+% \input{options.tex}
+% \input{commands.tex}
 
 
 
 
 \begin{document}
-	\pagestyle{empty} %No headings for the first pages.
+	% \pagestyle{empty} %No headings for the first pages.
 
-	\input{include/0Title.tex}
+	% \input{include/0Title.tex}
 
-	\linespread{1.5}
-	\selectfont
+	% \linespread{1.5}
+	% \selectfont
 
-	\addtocounter{page}{2} %for tasks%
+	% \addtocounter{page}{2} %for tasks%
 
-	\input{include/0Referat}
-	\clearpage
-	\section*{Зміст}
+	% \input{include/0Referat}
+	% \clearpage
+	% \section*{Зміст}
 
-	\makeatletter
-	\@starttoc{toc}
-	\makeatother
+	% \makeatletter
+	% \@starttoc{toc}
+	% \makeatother
 
 
-	\input{include/0Numenclature}
-	\input{include/1Intro}
-	\input{include/2Problem}
-	\input{include/3Discrete}
-	\input{include/4AppErrProp}
-	\input{include/5AEEProblem}
-	\import{include/}{6AeeOnTriangle}
-	\input{include/7Adaptation}
-	\import{include/}{8NumResults}
+	% \input{include/0Numenclature}
+	% \input{include/1Intro}
+	% \input{include/2Problem}
+	% \input{include/3Discrete}
+	% \input{include/4AppErrProp}
+	% \input{include/5AEEProblem}
+	% \import{include/}{6AeeOnTriangle}
+	% \input{include/7Adaptation}
+	% \import{include/}{8NumResults}
 
-	\input{include/9Protection}
+	% \input{include/9Protection}
 
-	\input{include/10Results}
+	% \input{include/10Results}
 
-	\clearpage
-	\bibliography{bibliography}{}
-	\bibliographystyle{gost780mod}
+	% \clearpage
+	% \bibliography{bibliography}{}
+	% \bibliographystyle{gost780mod}
 
 
 \end{document}
