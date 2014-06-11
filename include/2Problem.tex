@@ -1,103 +1,111 @@
 %!TEX root = ../Main.tex
-\clearpage
-\section{Формулювання задачі}
-
-Нехай $\Omega$ - область в Евклідовому просторі $\R^d$ з неперервним краєм $\Gamma \equiv \delta \Omega$, яка задовольняє умову Ліпшица.
-
-Розглянемо крайову задачу \eqref{eq:general_boundary} та її варіаційне формулювання \eqref{eq:general_variational}:
-%
-\begin{equation}\label{eq:general_boundary}
-	\begin{cases}
-			- \nabla (\mu \nabla u) + \beta \cdot \nabla u + &\sigma u = f,  \\
-			&u|_\Gamma = 0.
-	\end{cases}
-\end{equation}
-%
-\begin{equation}\label{eq:general_variational}
-	\begin{cases}
-		\mbox{Для } V := H_0^1 \left( \Omega \right) =
-		\left\lbrace
-			v \in H^1 \Omega : v|_\Gamma = 0
-		\right\rbrace, \\
-
-		\quad a_\Omega(w,v) := \displaystyle\int_\Omega
-		\left[
-			\mu \nabla w \nabla v +\beta v \nabla w + \sigma wv
-		\right] dx, \\
-
-		\qquad \left\langle l_\Omega, v \right\rangle := \displaystyle\int_\Omega fvdx \quad \forall v,w \in V \\
-
-		\mbox{знайти }u \in V \mbox{, таку що} \\
-
-		\qquad a_\Omega(w,v) = \left\langle l_\Omega, v \right\rangle \quad \forall v \in V.
-
-	\end{cases}
-\end{equation}
-
-Тут $\nabla u := \left\lbrace \frac{\partial u}{\partial x_i} \right\rbrace_{i=1}^d$,
-	а також $\mu = \left\lbrace \mu_{ij}(x) \right\rbrace_{i,j=1}^d$,
-	$\beta = \left\lbrace \beta_i(x) \right\rbrace_{i=1}^d$,
-	$\sigma = \sigma(x)$,
-	$f = f(x)$ - задані функції, такі що
-%
-%
-\begin{equation}
-	\begin{cases}
-		\mu_{ij}(x) = \mu_{ji}(x) ,\\
-			\sum \limits_{i,j=1}^d \mu_{ij}(x) \xi_i \xi_j
-				\ge
-			\mu_0 \sum \limits_{i=1}^d \xi_i^2, \quad
-			\mu_0 =\text{const}, \quad \forall \xi_i \in \R ,\\
-		\nabla \cdot \beta(x) := \mathlarger{\sum \limits_{i=1}^d} \frac{\partial \beta_i(x)}{\partial x_i} = 0
-			\text{ майже скрізь в } \Omega.
-	\end{cases}
-\end{equation}
-%
-\begin{equation}\label{eq:coef_spaces}
-	\mu_{ij}, \beta_i, \sigma \in L^\infty(\Omega), \quad f \in L^2(\Omega)
-\end{equation}
-%
-При таких умовах білінійна форма $a_\Omega (\cdot,\cdot): V \times V  \to \R$ є неперервною від вхідних даних, $V$-еліптичною і генерує енергетичну норму \cite{kozarevska2002}
-%
-\begin{equation}\label{eq:energy_norm}
-	\norm{u}_V := \sqrt{a_\Omega(u,u)}
-\end{equation}
 
 \newcommand{\vonenorm}{\left|v\right|_{1,\Omega}}
-
-Норма \eqref{eq:energy_norm} є еквівалентною до норми $\vonenorm = \sqrt{(\nabla v, \nabla v)}$ \cite{OstShynAee11} :
-%
 \newcommand{\infnorm}[1]{\norm{#1}_\infty}
-%
-\begin{equation}\label{eq:norm_equivalence}
-	\mu_0 \vonenorm^2 \le \norm{u}_V \le
-		\mu_0
-			\left[
-				\frac{\norm{\mu}_\infty}{\mu_0}+Pe(1+Sh)
-			\right]
-		\vonenorm^2 ,
-\end{equation}
-%
-де
-%
-\begin{equation}
-	Pe:= \frac{\infnorm{\beta} \text{ diam} \Omega}{\mu_0}, \qquad
-	Sh:= \frac{\infnorm{\sigma} \text{ diam} \Omega}{\infnorm{\beta}}
-\end{equation}
-%
-критерії Пекле і Струхаля. Тут
-%
-\begin{equation}
-	\begin{split}
-		\infnorm{\sigma} := ess \sup \limits_{x \in \Omega} |\sigma(x)|, \\
-		\infnorm{\beta} := \sqrt{\sum \limits_{i=1}^d \infnorm{\beta_i}^2}, \\
-		\infnorm{\mu} := \sqrt{\sum \limits_{i,j=1}^d \infnorm{\mu_{ij}}^2}.
-	\end{split}
-\end{equation}
+
+\begin{frame}[allowframebreaks]
+	\frametitle<presentation>{Формулювання задачі}
+
+		 \begin{itemize}
+		 	\item $\Omega$ - область в $\R^d$ з неперервним краєм $\Gamma \equiv \delta \Omega$
+		 	\item $\Omega$ - задовольняє умову Ліпшица
+		 	\item крайова задача
+
+				 \begin{equation}\label{eq:general_boundary}
+					\begin{cases}
+							- \nabla (\mu \nabla u) + \beta \cdot \nabla u + &\sigma u = f,  \\
+							&u|_\Gamma = 0.
+					\end{cases}
+				\end{equation}
+		\end{itemize}
+	\framebreak
+		Варіаційне формулювання
+
+		\begin{equation}\label{eq:general_variational}
+			\begin{cases}
+				\mbox{Для } V := H_0^1 \left( \Omega \right) =
+				\left\lbrace
+					v \in H^1 \Omega : v|_\Gamma = 0
+				\right\rbrace, \\
+
+				\quad a_\Omega(w,v) := \displaystyle\int_\Omega
+				\left[
+					\mu \nabla w \nabla v +\beta v \nabla w + \sigma wv
+				\right] dx, \\
+
+				\qquad \left\langle l_\Omega, v \right\rangle := \displaystyle\int_\Omega fvdx \quad \forall v,w \in V \\
+
+				\mbox{знайти }u \in V \mbox{, таку що} \\
+
+				\qquad a_\Omega(w,v) = \left\langle l_\Omega, v \right\rangle \quad \forall v \in V.
+
+			\end{cases}
+		\end{equation}
+
+	\framebreak
+
+		Структурні елементи
+
+		\begin{itemize}
+			\item $\nabla u := \left\lbrace \frac{\partial u}{\partial x_i} \right\rbrace_{i=1}^d$
+			\item $\mu = \left\lbrace \mu_{ij}(x) \right\rbrace_{i,j=1}^d$
+			\item $\beta = \left\lbrace \beta_i(x) \right\rbrace_{i=1}^d$
+			\item $\sigma = \sigma(x)$
+			\item $f = f(x)$
+		\end{itemize}
+		%
+		%
+		\begin{equation}
+			\begin{cases}
+				\mu_{ij}(x) = \mu_{ji}(x) ,\\
+					\sum \limits_{i,j=1}^d \mu_{ij}(x) \xi_i \xi_j
+						\ge
+					\mu_0 \sum \limits_{i=1}^d \xi_i^2, \quad
+					\mu_0 =\text{const}, \quad \forall \xi_i \in \R ,\\
+				\nabla \cdot \beta(x) := \mathlarger{\sum \limits_{i=1}^d} \frac{\partial \beta_i(x)}{\partial x_i} = 0
+					\text{ майже скрізь в } \Omega.
+			\end{cases}
+		\end{equation}
+		%
+		\begin{equation}\label{eq:coef_spaces}
+			\mu_{ij}, \beta_i, \sigma \in L^\infty(\Omega), \quad f \in L^2(\Omega)
+		\end{equation}
+
+	\framebreak
+
+		$a_\Omega (\cdot,\cdot): V \times V  \to \R$ володіє наступними властивостями \cite{kozarevska2002}:
+
+		\begin{itemize}
+			\item є неперервною від вхідних даних
+			\item є $V$-еліптичною
+			\item генерує енергетичну норму
+				\begin{equation}\label{eq:energy_norm}
+					\norm{u}_V := \sqrt{a_\Omega(u,u)}
+				\end{equation}
+		\end{itemize}
+
+	\framebreak
+
+	Норма \eqref{eq:energy_norm} еквівалентна $\vonenorm = \sqrt{(\nabla v, \nabla v)}$ \cite{OstShynAee11}
+% %
+ 	\begin{equation}\label{eq:norm_equivalence}
+		\mu_0 \vonenorm^2 \le \norm{v}^2_V \le
+			\mu_0
+				\left[
+					\frac{\norm{\mu}_\infty}{\mu_0}+Pe(1+Sh)
+				\right]
+			\vonenorm^2 ,
+	\end{equation}
+
+	\begin{equation}
+		Pe:= \frac{\infnorm{\beta} \text{ diam} \Omega}{\mu_0}, \qquad
+		Sh:= \frac{\infnorm{\sigma} \text{ diam} \Omega}{\infnorm{\beta}}
+	\end{equation}
+
+	\begin{itemize}
+		\item $l : V \to \R$ - неперервний функціонал
+		\item згідно теореми Лакса-Мільграма-Вишика задача \eqref{eq:general_variational} коректно поставлена
+	\end{itemize}
+\end{frame}
 
 \undef{\vonenorm}
-
-Згідно з
-\eqref{eq:coef_spaces} лінійний функціонал $l : V \to \R$ є неперервним.
-Тому згідно теореми Лакса-Мільграма-Вишика задача
-\eqref{eq:general_variational} коректно поставлена. Вона має єдиний розв'язок $u \in V$, що неперервно залежить від вхідних даних.
