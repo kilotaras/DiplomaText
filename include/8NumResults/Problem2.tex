@@ -122,7 +122,7 @@
 		&\norm{e_h^\prime} \text{ - оцінювач похибки представлений в \cite{OstShynAee11}, } \\
 		&\norm{e_h} \text{ - оцінювач похибки представлений в даній роботі,} \\
 		&\norm{e} \text{ - реальна похибка,} \\
-		&P[u_h]_i = \ln \frac{\ln{\norm{e_h^{i-1}}}-\ln{\norm{e_h^i}}}{\ln{N_i}-\ln{N_{i-1}}} \text{ - показник збіжності.} \\
+		&P[u_h]_i = \frac{\ln{\norm{e_h^{i-1}}}-\ln{\norm{e_h^i}}}{\ln{N_i}-\ln{N_{i-1}}} \text{ - показник збіжності.} \\
 	\end{split}
 \end{equation*}
 %
@@ -133,7 +133,7 @@
 	\centering
     \includegraphics[width=\textwidth]{problem2/my/Plotnb}
     \caption{Збіжність норм похибок МСЕ із збільшенням кількості елементів.}
-    \label{fig:p1_my_errors}
+    \label{fig:p2_my_errors}
 \end{figure}
 
 Якщо ж за основу для адаптивної стратегії взяти оцінювач з \cite{OstShynAee11}, то таблиця обчислених результатів матиме вигляд:
