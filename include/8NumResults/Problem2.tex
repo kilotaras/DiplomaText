@@ -135,3 +135,54 @@
     \caption{Збіжність норм похибок МСЕ із збільшенням кількості елементів.}
     \label{fig:p1_my_errors}
 \end{figure}
+
+Якщо ж за основу для адаптивної стратегії взяти оцінювач з \cite{OstShynAee11}, то таблиця обчислених результатів матиме вигляд:
+
+\pgfplotstabletypeset[col sep=comma,
+	columns={0,1,2,3,5,6,7,4},
+	columns/0/.style={
+		column name=\textnumero
+	},
+	columns/1/.style={
+		column name=$N(h)$
+	},
+	columns/2/.style={
+		column name=$M(h)$
+	},
+	columns/3/.style={
+		column name=$\norm{e_h^\prime}$
+	},
+	columns/4/.style={
+		column name=$\norm{e_h}$
+	},
+	columns/5/.style={
+		column name=$\norm{e}$
+	},
+	columns/6/.style={
+		column name=${P[u_h]}$,
+		fixed,precision=2
+	},
+	columns/7/.style={
+		column name=$\frac{\norm{e_h}}{\norm{e_h+u_h}}(\%)$
+	},
+%%
+	begin table=\begin{longtable},
+	end table=\end{longtable},
+%
+	every head row/.style={before row=\caption{Похибки та збіжність схеми.}\\\toprule, after row=\midrule},
+	every last row/.style={after row=\bottomrule},
+	every nth row={1}{before row=\midrule},
+	column type/.add={|}{|}
+]{include/8NumResults/problem2/ost/errors/table.csv}
+
+\clearpage
+Графік залежності похибки від кількості елементів має вигляд:
+
+\begin{figure}[H]
+	\centering
+    \includegraphics[width=\textwidth]{problem2/ost/Plotnb}
+    \caption{Збіжність норм похибок із збільшенням кількості елементів.}
+    \label{fig:p2_ost_errors}
+\end{figure}
+Оцінювач з \cite{OstShynAee11} використав меншу кількість елементів, ніж оцінювач \eqref{eq:AEE_final} (\nn{4953} проти \nn{9519}). Проте для цього йому знадобилося більше кроків (26 і 16 відповідно). Похибка при цьому оцінена майже вдвічі менше від реальної.
+
