@@ -28,8 +28,6 @@
 
 \usepackage{textcase}
 
-\usepackage{cite}
-
 \usepackage{pdfpages}
 \usepackage{lastpage}
 \usepackage{totcount}
@@ -39,6 +37,7 @@
 
 \usetheme{Warsaw}
 \usecolortheme{crane}
+\setbeamertemplate{bibliography item}[text]
 
 \title[Апостеріорні оцінювачі похибок МСЕ]{Апостеріорні оцінювачі похибок апроксимацій МСЕ та їх застосування}
 \author{Тарас Бойко}
@@ -49,8 +48,7 @@
 
 	\input{include/0Title.tex}
 
-	% \input{include/0Numenclature}
-	% \input{include/1Intro}
+	\input{include/1Intro}
 	% \input{include/2Problem}
 	% \input{include/3Discrete}
 	% \input{include/4AppErrProp}
@@ -63,9 +61,12 @@
 
 	% \input{include/10Results}
 
-	% \clearpage
-	% \bibliography{bibliography}{}
-	% \bibliographystyle{gost780mod}
+	\begin{frame}[allowframebreaks]
+		\frametitle<presentation>{Список літератури}
+		\nocite{*}
+		\bibliography{bibliography}{}
+		\bibliographystyle{amsplain}
+	\end{frame}
 
 
 \end{document}
