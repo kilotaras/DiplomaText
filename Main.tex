@@ -1,71 +1,53 @@
 \documentclass[12pt]{beamer}
 
-% %%%%%%%% TEXT packages
-% \usepackage{cmap}
-% \usepackage[utf8]{inputenc}
-% \usepackage[T1,T2A]{fontenc}
-% \usepackage[ukrainian]{babel}
+%%%%%%%% TEXT packages
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[ukrainian]{babel}
 
 
-% %% Packages for Graphics & Figures %%%%%%%%%%%%%%%%%%%%%%%%%%
-% \usepackage[pdftex]{graphicx} %%For loading graphic files
+\hypersetup{
+	unicode=true
+}
 
-% \usepackage[unicode]{hyperref}
-% \hypersetup{
-%     colorlinks,
-%     citecolor=black,
-%     filecolor=black,
-%     linkcolor=black,
-%     urlcolor=black
-% }
+%% Math Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
 
-% %% Math Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \usepackage{amsmath}
-% \usepackage{amsthm}
-% \usepackage{amsfonts}
+\usepackage{relsize}
+\usepackage{import}
 
-% \usepackage{relsize}
-% \usepackage{import}
+\usepackage{textcomp}
 
-% \usepackage{textcomp}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.10}
+\usepackage{booktabs}
+\usepackage{longtable}
 
-% \usepackage{pgfplotstable}
-% \pgfplotsset{compat=1.10}
-% \usepackage{booktabs}
-% \usepackage{longtable}
+\usepackage{textcase}
 
-% \usepackage{textcase}
+\usepackage{cite}
 
-% \usepackage{cite}
+\usepackage{pdfpages}
+\usepackage{lastpage}
+\usepackage{totcount}
 
-% \usepackage{pdfpages}
-% \usepackage{lastpage}
-% \usepackage{totcount}
+\input{options.tex}
+\input{commands.tex}
 
-% \input{options.tex}
-% \input{commands.tex}
+\usetheme{Warsaw}
+\usecolortheme{crane}
 
-
-
+\title[Апостеріорні оцінювачі похибок МСЕ]{Апостеріорні оцінювачі похибок апроксимацій МСЕ та їх застосування}
+\author{Тарас Бойко}
+\date{16 червня 2014}
 
 \begin{document}
-	% \pagestyle{empty} %No headings for the first pages.
 
-	% \input{include/0Title.tex}
 
-	% \linespread{1.5}
-	% \selectfont
-
-	% \addtocounter{page}{2} %for tasks%
-
-	% \input{include/0Referat}
-	% \clearpage
-	% \section*{Зміст}
-
-	% \makeatletter
-	% \@starttoc{toc}
-	% \makeatother
-
+	\input{include/0Title.tex}
 
 	% \input{include/0Numenclature}
 	% \input{include/1Intro}

@@ -1,59 +1,12 @@
 %!TEX root = Main.tex
 
-%page geometry and font size
-\usepackage[14pt]{extsizes}
-\usepackage[top=2cm,left=3cm,right=1.5cm,bottom=2cm]{geometry}
 
-%indents
-\usepackage{indentfirst}
-\setlength{\parindent}{1cm}
-
-%section style
-\usepackage{titlesec}
-\titleformat{\section}{\Large \bf}{\thesection .}{0.5em}{\centering}[]
-\titleformat{\subsection}{\large \bf}{\hspace{30pt}\thesubsection}{0.5em}{}[]
-\titleformat{\subsubsection}{\large}{\hspace{30pt}\thesubsubsection}{0.5em}{}[]
-
-\newcommand{\sectionbreak}{\clearpage}
-
-%no additional numbers in TOC
-\setcounter{secnumdepth}{3}
-
-%insert figures at place
+% %insert figures at place
 \usepackage{float}
 
 
-%bibliography in TOC
-\usepackage{tocbibind}
-\renewcommand{\tocbibname}{Список використаної літератури}
-
-\usepackage{fancyhdr}
-\fancyhf{}
-\renewcommand{\headrulewidth}{0pt}
-\makeatletter
-\let\ps@plain\ps@fancy
-\makeatother
-\fancyhead[R]{\thepage}
-
-
-
-
-%names for references
-
 \def\figureautorefname{Рис.}%
 
-
-
-\regtotcounter{figure}
-\regtotcounter{table}
-
-\newtotcounter{citenum}
-\def\oldcite{}
-\let\oldcite=\bibcite
-\def\bibcite{\stepcounter{citenum}\oldcite}
-
-\usepackage{caption}
-\captionsetup[table]{labelsep=period}
 
 
 \pgfkeys{pgf/number format/.cd, set thousands separator={\,}}
