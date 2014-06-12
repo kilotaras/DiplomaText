@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[    182916,       3071]
-NotebookOptionsPosition[    182596,       3055]
-NotebookOutlinePosition[    182941,       3070]
-CellTagsIndexPosition[    182898,       3067]
+NotebookDataLength[    183247,       3079]
+NotebookOptionsPosition[    182926,       3063]
+NotebookOutlinePosition[    183271,       3078]
+CellTagsIndexPosition[    183228,       3075]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -41,9 +41,15 @@ Cell[BoxData[
       RowBox[{"x", ",", "0", ",", "1"}], "}"}], ",", " ", 
      RowBox[{"{", 
       RowBox[{"y", ",", "0", ",", "1"}], "}"}], ",", " ", 
-     RowBox[{"PlotStyle", "\[Rule]", "Green"}]}], "]"}]}]}]], "Input",
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"Lighter", "[", 
+       RowBox[{"Green", ",", "0.6"}], "]"}]}], ",", " ", 
+     RowBox[{"BaseStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"FontSize", "\[Rule]", "15"}], "}"}]}]}], "]"}]}]}]], "Input",
  CellChangeTimes->{{3.6100287093405952`*^9, 3.6100287553862286`*^9}, {
-  3.610030571116082*^9, 3.610030594187402*^9}}],
+  3.610030571116082*^9, 3.610030594187402*^9}, {3.611583713156704*^9, 
+  3.611583759622231*^9}}],
 
 Cell[BoxData[
  Graphics3DBox[GraphicsComplex3DBox[CompressedData["
@@ -667,7 +673,7 @@ Zw86trf/Nez/7eneUjlLJ/JHwX/Uj7ROOOvRduKtzIv9hT9zkrP//xE8zj/6
 XB/zWL/iEd/Hepd/+/dctl/l4D6Z78EmpvsQ6ZyDH+nY/07iZ6XjvGwDb0/3
 The5d/oPqtyC9Q==
    "], {{
-     {RGBColor[0, 1, 0], EdgeForm[None], 
+     {RGBColor[0.6, 1., 0.6], EdgeForm[None], 
       GraphicsGroup3DBox[{Polygon3DBox[CompressedData["
 1:eJxFnXX8FUUXxu/v3rt77+a1O8AW7C5UVCxMLGxFBUVURAEFE7EJC2wUVAxs
 xS4UEMTGTuwAu8V4ny/P+Hn/2M+cO3d2dnZ3dubEc85p3+O4bsdWK5VKl6JS
@@ -3043,6 +3049,7 @@ qu/MNqNaPzH/fuz8oEeu44af7qv9S/fVZtV9tcX//b897pE67/R/AADgJ+4=
 
     "]],
   Axes->True,
+  BaseStyle->{FontSize -> 15},
   BoxRatios->{1, 1, 0.4},
   Method->{"RotationControl" -> "Globe"},
   PlotRange->{{0, 1}, {0, 1}, {-0.9984268406314338, 1.}},
@@ -3050,7 +3057,8 @@ qu/MNqNaPzH/fuz8oEeu44af7qv9S/fVZtV9tcX//b897pE67/R/AADgJ+4=
     Scaled[0.02], 
     Scaled[0.02], 
     Scaled[0.02]}]], "Output",
- CellChangeTimes->{{3.6100305901931734`*^9, 3.610030594883442*^9}}]
+ CellChangeTimes->{{3.6100305901931734`*^9, 3.610030594883442*^9}, {
+  3.6115837211175632`*^9, 3.6115837604334326`*^9}}]
 }, Open  ]]
 },
 WindowSize->{707, 637},
@@ -3070,8 +3078,8 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 835, 23, 72, "Input"],
-Cell[1417, 47, 181163, 3005, 335, "Output"]
+Cell[579, 22, 1076, 29, 92, "Input"],
+Cell[1658, 53, 181252, 3007, 298, "Output"]
 }, Open  ]]
 }
 ]
