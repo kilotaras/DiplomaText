@@ -25,7 +25,7 @@
 	\centering
     \includegraphics[scale=0.7]{problem2/ExactSolution}
     \captionsetup{format=hang,justification=centering}
-    \caption{Точний розв'язок задачі \eqref{eq:problem2}. \newline $u(x_1,x_2) = (1-x_1)(1-x_2)x_1x_2(x_1^{13}+y_1^{13})$ }
+    \caption{Точний розв'язок задачі \eqref{eq:problem2}. \newline $u(x_1,x_2) = (1-x_1)(1-x_2)x_1x_2(x_1^{13}+x_2^{13})$ }
     \label{plot:problem2_exact}
 \end{figure}
 
@@ -36,21 +36,21 @@
 \begin{figure}[H]
 	\centering
     \includegraphics[width=0.8\textwidth]{problem2/my/solutions/solution1}
-    \caption{$u_h(x)$ на першому кроці. Кількість скінченних елементів - \nn{196}.}
+    \caption{$u_h(x)$ на першому кроці. $N(h) = \nn{196}$.}
     \label{fig:p2_solution1}
 \end{figure}
 %
 \begin{figure}[H]
 	\centering
     \includegraphics[width=0.8\textwidth]{problem2/my/solutions/solution3}
-    \caption{$u_h(x)$ на 3-му кроці. Кількість скінченних елементів - \nn{1293}.}
+    \caption{$u_h(x)$ на 3-му кроці. $N(h) = \nn{1293}$.}
     \label{fig:p2_solution3}
 \end{figure}
 %
 \begin{figure}[H]
 	\centering
     \includegraphics[width=0.8\textwidth]{problem2/my/solutions/solution16}
-    \caption{$u_h(x)$ на 16-му кроці. Кількість скінченних елементів - \nn{9519}.}
+    \caption{$u_h(x)$ на 16-му кроці. $N(h) = \nn{9519}$.}
     \label{fig:p2_solution16}
 \end{figure}
 
@@ -60,21 +60,21 @@
 \begin{figure}[H]
 	\centering
     \includegraphics[width=0.7\textwidth]{problem2/my/AEE/aee1}
-    \caption{Індикатори похибки на першому кроці. Кількість скінченних елементів - \nn{196}.}
+    \caption{Індикатори похибки на першому кроці. $N(h) = \nn{196}$.}
     \label{fig:p2_aee1}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
     \includegraphics[width=0.7\textwidth]{problem2/my/AEE/aee3}
-    \caption{Індикатори похибки на 3-му кроці. Кількість скінченних елементів - \nn{1293}.}
+    \caption{Індикатори похибки на 3-му кроці. $N(h) = \nn{1293}$.}
     \label{fig:p2_aee3}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
     \includegraphics[width=0.7\textwidth]{problem2/my/AEE/aee16}
-    \caption{Індикатори похибки на 16-му кроці. Кількість скінченних елементів - \nn{9519}.}
+    \caption{Індикатори похибки на 16-му кроці. $N(h) = \nn{9519}$.}
     \label{fig:p2_aee16}
 \end{figure}
 
@@ -92,7 +92,7 @@
 		column name=$M(h)$
 	},
 	columns/3/.style={
-		column name=$\norm{e_h}^\prime$
+		column name=$\norm{e_h^\prime}$
 	},
 	columns/4/.style={
 		column name=$\norm{e_h}$
@@ -101,10 +101,11 @@
 		column name=$\norm{e}$
 	},
 	columns/6/.style={
-		column name=${P[u_h]}$
+		column name=${P[u_h]}$,
+		fixed,precision=2
 	},
 	columns/7/.style={
-		column name=$\frac{\norm{e_h}}{\norm{e_h+u_h}}(\%)$
+		column name=$\frac{\norm{e_h}}{\norm{e_h+u_h}}\%$,
 	},
 %%
 	begin table=\begin{longtable},
@@ -122,7 +123,7 @@
 		&\norm{e_h^\prime} \text{ - оцінювач похибки представлений в \cite{OstShynAee11}, } \\
 		&\norm{e_h} \text{ - оцінювач похибки представлений в даній роботі,} \\
 		&\norm{e} \text{ - реальна похибка,} \\
-		&P[u_h]_i = 2*\frac{\ln{\norm{e_h^{i-1}}}-\ln{\norm{e_h^i}}}{\ln{N_i}-\ln{N_{i-1}}} \text{ - показник збіжності.} \\
+		&P[u_h]_i = 2\frac{\ln{\norm{e_h^{i-1}}}-\ln{\norm{e_h^i}}}{\ln{N_i}-\ln{N_{i-1}}} \text{ - показник збіжності.} \\
 	\end{split}
 \end{equation*}
 %
@@ -163,7 +164,7 @@
 		fixed,precision=2
 	},
 	columns/7/.style={
-		column name=$\frac{\norm{e_h}}{\norm{e_h+u_h}}(\%)$
+		column name=$\frac{\norm{e_h}}{\norm{e_h+u_h}}\%$
 	},
 %%
 	begin table=\begin{longtable},
