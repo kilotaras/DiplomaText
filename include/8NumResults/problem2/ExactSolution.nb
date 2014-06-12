@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     71898,       1221]
-NotebookOptionsPosition[     71538,       1204]
-NotebookOutlinePosition[     71883,       1219]
-CellTagsIndexPosition[     71840,       1216]
+NotebookDataLength[     72102,       1224]
+NotebookOptionsPosition[     71742,       1207]
+NotebookOutlinePosition[     72087,       1222]
+CellTagsIndexPosition[     72044,       1219]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -50,10 +50,13 @@ Cell[BoxData[
      RowBox[{"{", 
       RowBox[{"y", ",", "0", ",", "1"}], "}"}], ",", " ", 
      RowBox[{"PlotStyle", "\[Rule]", "Green"}], ",", " ", 
-     RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}]}]], "Input",
+     RowBox[{"PlotRange", "\[Rule]", "All"}], ",", " ", 
+     RowBox[{"BaseStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"FontSize", "\[Rule]", "30"}], "}"}]}]}], "]"}]}]}]], "Input",
  CellChangeTimes->{{3.6100287093405952`*^9, 3.6100287553862286`*^9}, {
   3.610030571116082*^9, 3.610030594187402*^9}, {3.6114522384905863`*^9, 
-  3.6114523046663713`*^9}}],
+  3.6114523046663713`*^9}, {3.6115849602045946`*^9, 3.6115849782546206`*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -70,7 +73,7 @@ Cell[BoxData[
     RowBox[{"1", "-", "y"}], ")"}], " ", 
    SuperscriptBox["y", "14"]}]}]], "Output",
  CellChangeTimes->{{3.6100305901931734`*^9, 3.610030594883442*^9}, {
-  3.6114522575286756`*^9, 3.611452305059394*^9}}],
+   3.6114522575286756`*^9, 3.611452305059394*^9}, 3.611584978744621*^9}],
 
 Cell[BoxData[
  Graphics3DBox[GraphicsComplex3DBox[CompressedData["
@@ -1189,17 +1192,17 @@ F3/QWZHlS8mVrcqsOX+W4t3R9ClHd5sDcsY7tgZQqcuM/R0MBFSf26vD6P+v
 CE/TSc6RDqasOAF2yfp8aqPW8RpZ+PNW/MyNaKwOomINXgTtOcGnZk5Lz/0I
 v/6wo/EBL/Ccx1BxbkqkgBo3MrVBrusl3/lms/7d9l+bwjOr
     "]],
-  AutomaticImageSize->True,
   Axes->True,
+  BaseStyle->{FontSize -> 30},
   BoxRatios->{1, 1, 0.4},
-  ImageSize->{364.44954828232994`, 213.11139835058097`},
+  ImageSize->{670.4495482823299, 394.},
   Method->{"RotationControl" -> "Globe"},
   PlotRange->{All, All, All},
   PlotRangePadding->{Automatic, Automatic, Automatic},
   ViewPoint->{0.274362808441697, -3.246428424129541, 0.914017251668581},
   ViewVertical->{0., 0., 1.}]], "Output",
  CellChangeTimes->{{3.6100305901931734`*^9, 3.610030594883442*^9}, {
-  3.6114522575286756`*^9, 3.6114523050823956`*^9}}]
+   3.6114522575286756`*^9, 3.611452305059394*^9}, 3.611584978764621*^9}]
 }, Open  ]]
 },
 WindowSize->{707, 637},
@@ -1219,9 +1222,9 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[579, 22, 1214, 33, 112, "Input"],
-Cell[1796, 57, 503, 15, 63, "Output"],
-Cell[2302, 74, 69220, 1127, 228, "Output"]
+Cell[579, 22, 1388, 36, 112, "Input"],
+Cell[1970, 60, 526, 15, 31, "Output"],
+Cell[2499, 77, 69227, 1127, 441, "Output"]
 }, Open  ]]
 }
 ]
