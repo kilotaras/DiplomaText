@@ -1,6 +1,7 @@
 %!TEX root = ../../Main.tex
-\begin{frame}[allowframebreaks]
-	\frametitle<presentation>{Лінійні апроксимації МСЕ на трикутнику}
+\section{Лінійні апроксимації МСЕ на трикутнику}
+\frame{\sectionpage}
+\begin{frame}{Тріангуляція}
 
 	$\Omega \subset \R^2$ поділена на трикутники $K = A_iA_jA_k$
 
@@ -11,7 +12,9 @@
 		\item $E_h = \lbrace S_{ij} \rbrace$ - множина ребер $S_{ij} = (A_i, A_j)$
 	\end{itemize}
 
-	\framebreak
+\end{frame}
+
+\begin{frame}{Вигляд апроксимації}
 
 		Будемо шукати апроксимацію
 		\begin{equation}
@@ -26,25 +29,27 @@
 
 		$P_1(K)$ - множина поліномів першого ступеня на трикутнику $K$
 
-	\framebreak
+\end{frame}
 
-		$L_m = L_m(x)$ - барицентричні координати трикутника $K = A_i A_j A_k$
+\begin{frame}{Барицентричні координати}
 
-		\begin{equation}\label{eq:barycentric_coord}
-			\begin{cases}
-				L_i(x) = \frac{a_i + b_i x_1 + c_i x_2}{2 |K|} \\
-					\left.
-					\begin{split}
-						&a_i := x_1^k x_2^j - x_1^j x_2^k \\
-						&b_i := x_2^j -x_2^k \\
-						&c_i := -x_1^j+x_1^k
-					\end{split}
-					\right|
-					i \to j \to k \to i
-			\end{cases}
-		\end{equation}
+	$L_m = L_m(x)$ - барицентричні координати трикутника $K = A_i A_j A_k$
 
-	\end{frame}
+	\begin{equation}\label{eq:barycentric_coord}
+		\begin{cases}
+			L_i(x) = \frac{a_i + b_i x_1 + c_i x_2}{2 |K|} \\
+				\left.
+				\begin{split}
+					&a_i := x_1^k x_2^j - x_1^j x_2^k \\
+					&b_i := x_2^j -x_2^k \\
+					&c_i := -x_1^j+x_1^k
+				\end{split}
+				\right|
+				i \to j \to k \to i
+		\end{cases}
+	\end{equation}
+
+\end{frame}
 
 \begin{frame}{Графік однієї із барицентричних координат}
 	\begin{figure}[H]

@@ -1,7 +1,9 @@
 %!TEX root = ../../Main.tex
 
-\begin{frame}[allowframebreaks]
-	\frametitle<presentation>{Оцінювач на трикутнику}
+\section{Оцінювач на трикутнику}
+\frame{\sectionpage}
+
+\begin{frame}{Структура оцінювача}
 
 	Будуємо базис $\lbrace \phi_{ij} \rbrace_{S_{ij} \in E_h}$, так що
 %
@@ -12,19 +14,19 @@
 		\end{cases}
 	\end{equation}
 
-		Структура оцінювача:
-		$e_h(x) := \sum \limits_{S_{ij} \in E_h} \lambda_{ij} \phi_{ij}(x), \qquad \forall x \in \Omega$
+	Структура оцінювача:
+	$e_h(x) := \sum \limits_{S_{ij} \in E_h} \lambda_{ij} \phi_{ij}(x), \qquad \forall x \in \Omega$
 
-		Функції $\phi_{ij}$ побудуємо наступним чином (див. \autoref{fig:AEE_basis}):
-		%
-		\begin{equation}
-			\phi_{ij}(x) =
-			\begin{cases}
-				L_i(x)L_j(x), &\quad \forall x \in K ,\\
-				L_i^\prime(x)L_j^\prime(x), &\quad \forall x \in K^\prime ,\\
-				0 &\quad \forall x \in \Omega \setminus (K \cup K^\prime).
-			\end{cases}
-		\end{equation}
+	Функції $\phi_{ij}$ побудуємо наступним чином (див. \autoref{fig:AEE_basis}):
+	%
+	\begin{equation}
+		\phi_{ij}(x) =
+		\begin{cases}
+			L_i(x)L_j(x), &\quad \forall x \in K ,\\
+			L_i^\prime(x)L_j^\prime(x), &\quad \forall x \in K^\prime ,\\
+			0 &\quad \forall x \in \Omega \setminus (K \cup K^\prime).
+		\end{cases}
+	\end{equation}
 
 \end{frame}
 
@@ -38,26 +40,22 @@
 
 \end{frame}
 
-\begin{frame}{Система рівнянь для знаходження АОП}
+\newcommand{\error}[1]{\lambda_{#1} \phi_{#1}(x)}
 
-	\begin{equation}\label{eq:AEE_system}
-		\sum \limits_{S_{ij} \in E_h} a_\Omega(\phi_{ij}, \phi_{rs}) \lambda_{ij} = \langle \rho(u_h), \phi_{rs} \rangle, \quad S_{rs} \in E_h.
-	\end{equation}
-	{\huge{?????}}
-	%
+\begin{frame}{Рівняння для знаходження АОП}
+
 	\begin{equation}
 		\begin{split}
-			a_\Omega(\phi_{ij}, \phi_{ij}) \lambda_{ij} = \langle \rho(u_h), \phi_{ij} \rangle ,\\
 			\lambda_{ij} = \frac{\langle \rho(u_h), \phi_{ij} \rangle}{a_\Omega(\phi_{ij}, \phi_{ij})}
 				= \frac{\langle l_\Omega, \phi_{ij}\rangle - a_\Omega(u_h, \phi_{ij})}{a_\Omega(\phi_{ij}, \phi_{ij})}
 		\end{split}
 		\quad S_{ij} \in E_h.
 	\end{equation}
 
-	Отримали
+	Отримали АОП у вигляді
 
 	\begin{equation}\label{eq:AEE_final}
-		e_h(x) := \sum \limits_{S_ij \in E_h} \lambda_{ij} \phi_{ij}(x), \qquad \forall x \in \Omega.
+		e_h(x)\bigg|_K = \error{ij}+\error{jk}+\error{ki}, \qquad K = A_iA_jA_k.
 	\end{equation}
 
 \end{frame}

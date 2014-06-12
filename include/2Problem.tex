@@ -3,13 +3,14 @@
 \newcommand{\vonenorm}{\left|v\right|_{1,\Omega}}
 \newcommand{\infnorm}[1]{\norm{#1}_\infty}
 
-\begin{frame}[allowframebreaks]
-	\frametitle<presentation>{Формулювання задачі}
+\section{Формулювання задачі}
+\frame{\sectionpage}
+\begin{frame}
+	\frametitle<presentation>{Крайова задача}
 
 		 \begin{itemize}
 		 	\item $\Omega$ - область в $\R^d$ з неперервним краєм $\Gamma \equiv \delta \Omega$
-		 	\item $\Omega$ - задовольняє умову Ліпшица
-		 	\item крайова задача
+		 	\item $\Gamma$ - задовольняє умову Ліпшица
 
 				 \begin{equation}\label{eq:general_boundary}
 					\begin{cases}
@@ -18,9 +19,9 @@
 					\end{cases}
 				\end{equation}
 		\end{itemize}
-	\framebreak
-		Варіаційне формулювання
+\end{frame}
 
+\begin{frame}{Варіаційне формулювання}
 		\begin{equation}\label{eq:general_variational}
 			\begin{cases}
 				\mbox{Для } V := H_0^1 \left( \Omega \right) =
@@ -30,7 +31,7 @@
 
 				\quad a_\Omega(w,v) := \displaystyle\int_\Omega
 				\left[
-					\mu \nabla w \nabla v +\beta v \nabla w + \sigma wv
+					\mu \nabla w \cdot \nabla v +v \beta \cdot \nabla w + \sigma wv
 				\right] dx, \\
 
 				\qquad \left\langle l_\Omega, v \right\rangle := \displaystyle\int_\Omega fvdx \quad \forall v,w \in V \\
@@ -38,21 +39,19 @@
 				\mbox{знайти }u \in V \mbox{, таку що} \\
 
 				\qquad a_\Omega(w,v) = \left\langle l_\Omega, v \right\rangle \quad \forall v \in V.
-
 			\end{cases}
 		\end{equation}
+		$\nabla u := \left\lbrace \frac{\partial u}{\partial x_i} \right\rbrace_{i=1}^d$
 
-	\framebreak
+\end{frame}
 
-		Структурні елементи
+\begin{frame}{Дані задачі}
+		%
+		\begin{align}
+			&\mu = \left\lbrace \mu_{ij}(x) \right\rbrace_{i,j=1}^d \qquad &\beta = \left\lbrace \beta_i(x) \right\rbrace_{i=1}^d \\
+			&\sigma = \sigma(x) \qquad \qquad \qquad &f = f(x)
+		\end{align}
 
-		\begin{itemize}
-			\item $\nabla u := \left\lbrace \frac{\partial u}{\partial x_i} \right\rbrace_{i=1}^d$
-			\item $\mu = \left\lbrace \mu_{ij}(x) \right\rbrace_{i,j=1}^d$
-			\item $\beta = \left\lbrace \beta_i(x) \right\rbrace_{i=1}^d$
-			\item $\sigma = \sigma(x)$
-			\item $f = f(x)$
-		\end{itemize}
 		%
 		%
 		\begin{equation}
@@ -71,21 +70,24 @@
 			\mu_{ij}, \beta_i, \sigma \in L^\infty(\Omega), \quad f \in L^2(\Omega)
 		\end{equation}
 
-	\framebreak
+\end{frame}
 
-		$a_\Omega (\cdot,\cdot): V \times V  \to \R$ володіє наступними властивостями \cite{kozarevska2002}:
+\begin{frame}{Властивості задачі I}
+
+		$a_\Omega (\cdot,\cdot): V \times V  \to \R$ володіє наступними властивостями \footfullcite{kozarevska2002}:
 
 		\begin{itemize}
-			\item є неперервною від вхідних даних
+			\item неперервна в $V \times V$
 			\item є $V$-еліптичною
 			\item генерує енергетичну норму
 				\begin{equation}\label{eq:energy_norm}
 					\norm{u}_V := \sqrt{a_\Omega(u,u)}
 				\end{equation}
 		\end{itemize}
+\end{frame}
 
-	\framebreak
 
+\begin{frame}{Властивості задачі II}
 	Енергетична норма \eqref{eq:energy_norm} еквівалентна $\vonenorm = \sqrt{(\nabla v, \nabla v)}$ \footfullcite{OstShynAee11}
 % %
  	\begin{equation}\label{eq:norm_equivalence}
@@ -106,6 +108,7 @@
 		\item $l : V \to \R$ - неперервний функціонал
 		\item згідно теореми Лакса-Мільграма-Вишика варіаційна задача \eqref{eq:general_variational} коректно поставлена
 	\end{itemize}
+
 \end{frame}
 
 \undeff{\vonenorm}

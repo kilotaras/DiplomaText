@@ -1,8 +1,9 @@
 %!TEX root = ../Main.tex
 
-\begin{frame}[allowframebreaks]
-	\frametitle<presentation>{Дискретизована задача}
-		 $\Omega \subset \R$ поділена на скінченні елементи $K$:
+\section{Дискретизована задача}
+\frame{\sectionpage}
+\begin{frame}{Поділ простору}
+		 $\Omega \subset \R^d$ поділена на скінченні елементи $K$:
 		 $
 			T_h=\lbrace K \rbrace, \quad
 			h := \max_{K \in T_h}h_K, \quad
@@ -20,9 +21,9 @@
 				\end{cases}
 			\end{split}
 		\end{equation}
+\end{frame}
 
-	\framebreak
-
+\begin{frame}{Дискретизована задача}
 		$V_h \subset V$, $\mbox{dim} V_h = N(h) = N < + \infty$ - простір апроксимацій
 
 		Заміняємо задачу \eqref{eq:general_variational} на наступну
@@ -35,8 +36,9 @@
 			\end{cases}
 		\end{equation}
 
-	\framebreak
+\end{frame}
 
+\begin{frame}{Система рівнянь}
 		Обравши базис $\lbrace \phi_i(x)\rbrace_{i=1}^N \subset V_h$,конкретизуємо \eqref{eq:general_discrete}:
 		%
 		\begin{equation}\label{eq:concrete_discrete}
@@ -48,6 +50,6 @@
 		\end{cases}
 		\end{equation}
 
-		Cистема рівнянь буде додатньо визначеною \cite{OstShynAee11}
+		Матриця системи рівнянь буде додатньо визначеною \footfullcite{OstShynAee11}
 
 \end{frame}

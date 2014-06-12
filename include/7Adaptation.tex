@@ -1,9 +1,9 @@
 %!TEX root = ../Main.tex
 
-\newcommand{\error}[1]{\lambda_{#1} \phi_{#1}(x)}
+\section{Стратегія адаптації}
+\frame{\sectionpage}
 
-\begin{frame}[allowframebreaks]
-	\frametitle<presentation>{Стратегія адаптації}
+\begin{frame}{Стратегія адаптації}
 
 	\begin{itemize}
 		\item Отримавши оцінку похибки будуємо адаптивну стратегію для знаходження розв'язку із заданою точністю
@@ -11,9 +11,11 @@
 		\item Ущільнюємо сітку на елементах де велика похибка
 	\end{itemize}
 
-	\framebreak
+\end{frame}
 
-	Визначимо похибку на кожному скінченному елементі:
+\begin{frame}{Умова поділу}
+
+	Маємо
 	%
 	\begin{equation}\label{eq:error_element}
 		e_h(x)\bigg|_K = \error{ij}+\error{jk}+\error{ki}, \qquad K = A_iA_jA_k.
@@ -28,7 +30,10 @@
 		}*100\%.
 	\end{equation}
 
-	Показник перевищує деяку задану межу $\Rightarrow$ ділимо цей трикутник.
+	\begin{equation*}\label{eq:error_indicator}
+		\text{ind}_K < \varepsilon \Rightarrow \text{ ділимо трикутник}
+	\end{equation*}
+
 \end{frame}
 
 \undeff{\error}
