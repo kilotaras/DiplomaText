@@ -2,20 +2,22 @@
 \clearpage
 \section{Формулювання задачі}
 
-Нехай $\Omega$ - область в Евклідовому просторі $\R^d$ з неперервним краєм $\Gamma \equiv \delta \Omega$, яка задовольняє умову Ліпшица.
+Нехай $\Omega$ - область в евклідовому просторі $\R^d$ з неперервним краєм $\Gamma \equiv \delta \Omega$, яка задовольняє умову Ліпшица.
 
-Розглянемо крайову задачу \eqref{eq:general_boundary} та її варіаційне формулювання \eqref{eq:general_variational}:
+Розглянемо крайову задачу
 %
 \begin{equation}\label{eq:general_boundary}
 	\begin{cases}
-			- \nabla (\mu \nabla u) + \beta \cdot \nabla u + &\sigma u = f,  \\
+			- \nabla \cdot (\mu \nabla u) + \beta \cdot \nabla u + &\sigma u = f, \mbox{ в } \Omega\\
 			&u|_\Gamma = 0.
 	\end{cases}
 \end{equation}
 %
+та її варіаційне формулювання \eqref{eq:general_variational}:
+%
 \begin{equation}\label{eq:general_variational}
 	\begin{cases}
-		\mbox{Для } V := H_0^1 \left( \Omega \right) =
+		\mbox{Задано } V := H_0^1 \left( \Omega \right) =
 		\left\lbrace
 			v \in H^1 \Omega : v|_\Gamma = 0
 		\right\rbrace, \\
@@ -25,7 +27,7 @@
 			\mu \nabla w \nabla v +\beta v \nabla w + \sigma wv
 		\right] dx, \\
 
-		\qquad \left\langle l_\Omega, v \right\rangle := \displaystyle\int_\Omega fvdx \quad \forall v,w \in V \\
+		\qquad \left\langle l_\Omega, v \right\rangle := \displaystyle\int_\Omega fvdx \quad \forall v,w \in V ; \\
 
 		\mbox{знайти }u \in V \mbox{, таку що} \\
 
