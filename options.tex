@@ -9,3 +9,12 @@
 \pgfkeys{pgf/number format/.cd, set thousands separator={\,}}
 
 \setbeamertemplate{caption}[numbered]
+
+\setbeamertemplate{section page}
+{
+    \begin{centering}
+    \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+    \end{beamercolorbox}
+    \end{centering}
+}
