@@ -9,7 +9,7 @@
 	- \Delta u(x_1,x_2) + 1000u(x_1, x_2) = f(x_1,x_2), \\
 	f(x_1,x_2) = (18 \pi^2 +1000)\sin(3 \pi x_1) \sin (3 \pi x_2), \\
 	u|_\Gamma = 0 ,\\
-	\Omega = \left[0;1\right] \times \left[0;1\right].
+	\Omega = \left(0;1\right) \times \left(0;1\right).
 \end{cases}
 \end{equation}
 %%%
@@ -34,55 +34,55 @@
 \begin{figure}[H]
 	\centering
     \includegraphics[scale=0.7]{problem1/InitialMesh}
-    \caption{Початкове розбиття на скінченні елементи.}
+    \caption{Початкова тріангуляція на скінченні елементи.}
     \label{fig:init_mesh1}
 \end{figure}
 
 
-Для отримання похибки в 5\% знадобилося 18 кроків та \nn{19322} скінченних елементи. Графіки апроксимацій на різних кроках обчислення зображені на \autoref{fig:p1_solution1}-\ref{fig:p1_solution18}:
+Для отримання похибки в 5\% знадобилося 18 кроків перебудови та \nn{19322} скінченні елементи. Графіки апроксимацій на різних кроках обчислення зображені на \autoref{fig:p1_solution1}-\ref{fig:p1_solution18}:
 %
 \begin{figure}[H]
 	\centering
-    \includegraphics[scale=0.9]{problem1/my/solutions/1}
-    \caption{$u_h(x)$ на першому кроці. Кількість скінченних елементів - \nn{400}.}
+    \includegraphics[width=0.8\textwidth]{problem1/my/solutions/1}
+    \caption{$u_h(x)$ на першому кроці. $N(h) = \nn{400}$.}
     \label{fig:p1_solution1}
 \end{figure}
 %
 \begin{figure}[H]
 	\centering
-    \includegraphics[scale=0.7]{problem1/my/solutions/5}
-    \caption{$u_h(x)$ на 5-му кроці. Кількість скінченних елементів - \nn{12903}.}
+    \includegraphics[width=0.8\textwidth]{problem1/my/solutions/5}
+    \caption{$u_h(x)$ на 5-му кроці. $N(h) = \nn{12903}$.}
     \label{fig:p1_solution5}
 \end{figure}
 %
 \begin{figure}[H]
 	\centering
-    \includegraphics[scale=0.7]{problem1/my/solutions/18}
-    \caption{$u_h(x)$ на 18-му кроці. Кількість скінченних елементів - \nn{19322}.}
+    \includegraphics[width=\textwidth]{problem1/my/solutions/18}
+    \caption{$u_h(x)$ на 18-му кроці. $N(h) = \nn{19322}$.}
     \label{fig:p1_solution18}
 \end{figure}
 %
 \clearpage
-Графіки індикаторів похибок на скінченних елементах зображено на \autoref{fig:p1_aee1} - \autoref{fig:p1_aee18}.
+Графіки індикаторів похибок на скінченних елементах зображено на \autoref{fig:p1_aee1}-\ref{fig:p1_aee18}.
 %
 \begin{figure}[H]
 	\centering
     \includegraphics[scale=0.8]{problem1/my/AEE/1}
-    \caption{Індикатори похибки на першому кроці. Кількість скінченних елементів - \nn{400}.}
+    \caption{Індикатори похибки на першому кроці.  $N(h) = \nn{400}$.}
     \label{fig:p1_aee1}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
     \includegraphics[scale=0.85]{problem1/my/AEE/5}
-    \caption{Індикатори похибки на 5-му кроці. Кількість скінченних елементів - \nn{12903}.}
+    \caption{Індикатори похибки на 5-му кроці.  $N(h) = \nn{12903}$.}
     \label{fig:p1_aee5}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
     \includegraphics[scale=0.85]{problem1/my/AEE/18}
-    \caption{Індикатори похибки на 18-му кроці. Кількість скінченних елементів - \nn{19322}.}
+    \caption{Індикатори похибки на 18-му кроці.  $N(h) = \nn{19322}$.}
     \label{fig:p1_aee18}
 \end{figure}
 
