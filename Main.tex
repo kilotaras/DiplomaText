@@ -63,6 +63,11 @@
 
 	\input{include/0Title.tex}
 
+	\begin{frame}<beamer>{План}
+		\setcounter{tocdepth}{1}
+		\tableofcontents
+	\end{frame}
+
 	\input{include/1Intro}
 	\input{include/2Problem}
 	\input{include/3Discrete}
@@ -74,7 +79,7 @@
 
 	\input{include/10Results}
 
-	\section{Список літератури}
+	\section*{Список літератури}
 	\frame{\sectionpage}
 	\begin{frame}[allowframebreaks]
 		\frametitle<presentation>{Список літератури}
@@ -82,15 +87,7 @@
 		\printbibliography
 	\end{frame}
 
-	\section{}
-
-	\begin{frame}
-		\begin{centering}
-	    \begin{beamercolorbox}[sep=12pt,center]{part title}
-	    	\usebeamerfont{subsection title}
-	    		Дякую за увагу
-	    \end{beamercolorbox}
-    \end{centering}
-	\end{frame}
+	\section*{Дякую за увагу}
+	\frame{\sectionpage}
 
 \end{document}
