@@ -43,6 +43,16 @@
 \author{Тарас Бойко}
 \date{16 червня 2014}
 
+\usepackage[backend=bibtex]{biblatex}
+\renewcommand{\footnotesize}{\scriptsize}
+\addbibresource{bibliography.bib}
+
+\makeatletter
+\def\beamer@framenotesbegin{% at beginning of slide
+    \gdef\beamer@noteitems{}%
+    \gdef\beamer@notes{{}}% used to be totally empty.
+}
+
 \begin{document}
 
 
@@ -50,7 +60,7 @@
 
 	\input{include/1Intro}
 	\input{include/2Problem}
-	 \input{include/3Discrete}
+	\input{include/3Discrete}
 	% \input{include/4AppErrProp}
 	% \input{include/5AEEProblem}
 	% \import{include/}{6AeeOnTriangle}
@@ -64,8 +74,10 @@
 	\begin{frame}[allowframebreaks]
 		\frametitle<presentation>{Список літератури}
 		\nocite{*}
-		\bibliography{bibliography}{}
-		\bibliographystyle{amsplain}
+		\printbibliography
+		% \nocite{*}
+		% \bibliography{bibliography}{}
+		% \bibliographystyle{amsplain}
 	\end{frame}
 
 
