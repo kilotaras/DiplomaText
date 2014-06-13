@@ -3,25 +3,18 @@
 \newcommand{\vonenorm}{\left|v\right|_{1,\Omega}}
 \newcommand{\infnorm}[1]{\norm{#1}_\infty}
 
-\section{Формулювання задачі}
+\section{Формулювання крайової і варіаційної задач}
 \frame{\sectionpage}
 \begin{frame}
-	\frametitle<presentation>{Крайова задача}
+	\frametitle<presentation>{Крайова і варіаційна задачі}
 
-		 \begin{itemize}
-		 	\item $\Omega$ - область в $\R^d$ з неперервним краєм $\Gamma \equiv \delta \Omega$
-		 	\item $\Gamma$ - задовольняє умову Ліпшица
+		 \begin{equation}
+			\begin{cases}
+				- \nabla (\mu \cdot \nabla u) + \beta \cdot \nabla u + &\sigma u = f, \text{ в } \Omega \subset \R^d \\
+				&u = 0, \text{ на } \Gamma \equiv \delta \Omega
+			\end{cases}
+		\end{equation}
 
-				 \begin{equation}\label{eq:general_boundary}
-					\begin{cases}
-							- \nabla (\mu \nabla u) + \beta \cdot \nabla u + &\sigma u = f,  \\
-							&u|_\Gamma = 0.
-					\end{cases}
-				\end{equation}
-		\end{itemize}
-\end{frame}
-
-\begin{frame}{Варіаційне формулювання}
 		\begin{equation}\label{eq:general_variational}
 			\begin{cases}
 				\mbox{Для } V := H_0^1 \left( \Omega \right) =
@@ -41,11 +34,10 @@
 				\qquad a_\Omega(w,v) = \left\langle l_\Omega, v \right\rangle \quad \forall v \in V.
 			\end{cases}
 		\end{equation}
-		$\nabla u := \left\lbrace \frac{\partial u}{\partial x_i} \right\rbrace_{i=1}^d$
 
 \end{frame}
 
-\begin{frame}{Дані задачі}
+\begin{frame}{Регулярність даних задачі}
 		%
 		\begin{align}
 			&\mu = \left\lbrace \mu_{ij}(x) \right\rbrace_{i,j=1}^d \qquad &\beta = \left\lbrace \beta_i(x) \right\rbrace_{i=1}^d \\
@@ -60,7 +52,7 @@
 					\sum \limits_{i,j=1}^d \mu_{ij}(x) \xi_i \xi_j
 						\ge
 					\mu_0 \sum \limits_{i=1}^d \xi_i^2, \quad
-					\mu_0 =\text{const}, \quad \forall \xi_i \in \R ,\\
+					\mu_0 =\text{const} > 0, \quad \forall \xi_i \in \R ,\\
 				\nabla \cdot \beta(x) := \mathlarger{\sum \limits_{i=1}^d} \frac{\partial \beta_i(x)}{\partial x_i} = 0
 					\text{ майже скрізь в } \Omega.
 			\end{cases}
