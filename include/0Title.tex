@@ -2,6 +2,18 @@
 
 
 {
+	\defbeamertemplate*{title page}{customized}[1][]
+	{
+	  \centering{
+	  	  \usebeamerfont{author}\insertauthor\par
+		  \huge{\usebeamerfont{title}\inserttitle}
+		  \\[0.5cm]
+		  \scriptsize{Науковий керівник: Шинкаренко Г.А.} \\
+		  \bigskip \bigskip \bigskip
+		  \small{\usebeamerfont{date}\insertdate\par}
+		  \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic
+	  }
+	}
 	\setbeamertemplate{footline}{}
 	\setbeamertemplate{headline}{
 		\linespread{2}
