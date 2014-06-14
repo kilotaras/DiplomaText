@@ -33,84 +33,45 @@
 	\frametitle<presentation>{Наближення}
 
 	Граничну точність апроксимації на скінченному елементі - 7\%.
-
 	Початкове розбиття - рівномірне на сітці 7x7
 
-	Графіки наближень:
 
 		\begin{figure}[H]
 			 \begin{columns}
 			 	\begin{column}{0.5\textwidth}
 		     		\includegraphics[width=\textwidth]{problem2/my/solutions/solution1}
 		     	\end{column}
-		     	\begin{column}{0.3\textwidth}
-		     		\caption*{1-й крок. $N(h) = \nn{196}$.}
+		     	\begin{column}{0.5\textwidth}
+		     		\includegraphics[width=\textwidth]{problem2/my/AEE/aee1}
 		     	\end{column}
 		     \end{columns}
+		     \caption*{1-й крок. $N(h) = \nn{196}$.}
 		\end{figure}
-		%
-		\begin{figure}[H]
-			\begin{columns}
-			 	\begin{column}{0.7\textwidth}
-			 		\includegraphics[width=\textwidth]{problem2/my/solutions/solution3}
-			 	 \end{column}
-			     \begin{column}{0.3\textwidth}
-			     	\caption*{3-й крок. $N(h) = \nn{1293}$.}
-			     \end{column}
-		     \end{columns}
-		\end{figure}
-		%
-		\begin{figure}[H]
-			\begin{columns}
-			 	\begin{column}{0.7\textwidth}
-			 		\includegraphics[width=\textwidth]{problem2/my/solutions/solution16}
-			 	 \end{column}
-			     \begin{column}{0.3\textwidth}
-			     	\caption*{16-й крок. $N(h) = \nn{9519}$.}
-			     \end{column}
-		     \end{columns}
-		\end{figure}
-\end{frame}
-
-
-\begin{frame}[allowframebreaks]
-	\frametitle<presentation>{Індикатори похибок}
-		Графіки індикаторів похибок на скінченних елементах:
 		%
 		\begin{figure}[H]
 			\begin{columns}
 			 	\begin{column}{0.5\textwidth}
-			 		\includegraphics[width=\textwidth]{problem2/my/AEE/aee1}
+			 		\includegraphics[width=\textwidth]{problem2/my/solutions/solution3}
 			 	 \end{column}
-			     \begin{column}{0.3\textwidth}
-			     	\caption*{1-й крок. $N(h) = \nn{196}$.}
+			     \begin{column}{0.5\textwidth}
+					\includegraphics[width=\textwidth]{problem2/my/AEE/aee3}
 			     \end{column}
 		     \end{columns}
+		     \caption*{3-й крок. $N(h) = \nn{1293}$.}
 		\end{figure}
-
+		%
 		\begin{figure}[H]
 			\begin{columns}
-			 	\begin{column}{0.7\textwidth}
-			 		\includegraphics[width=\textwidth]{problem2/my/AEE/aee3}
+			 	\begin{column}{0.5\textwidth}
+			 		\includegraphics[width=\textwidth]{problem2/my/solutions/solution16}
 			 	 \end{column}
-			     \begin{column}{0.3\textwidth}
-			     	\caption*{3-й крок. $N(h) = \nn{1293}$.}
+			     \begin{column}{0.5\textwidth}
+			     	\includegraphics[width=\textwidth]{problem2/my/AEE/aee16}
 			     \end{column}
 		     \end{columns}
-		\end{figure}
-
-		\begin{figure}[H]
-			\begin{columns}
-			 	\begin{column}{0.7\textwidth}
-			 		\includegraphics[width=\textwidth]{problem2/my/AEE/aee16}
-			 	 \end{column}
-			     \begin{column}{0.3\textwidth}
-			     	\caption*{16-й крок. $N(h) = \nn{9519}$.}
-			     \end{column}
-		     \end{columns}
+		     \caption*{16-й крок. $N(h) = \nn{9519}$.}
 		\end{figure}
 \end{frame}
-
 
 \begin{frame}[allowframebreaks]
  	\frametitle<presentation>{Таблиця результатів}
@@ -129,13 +90,16 @@
 			column name=$M(h)$
 		},
 		columns/3/.style={
-			column name=$\norm{e_h^\prime}$,
+			column name=$\norm{e_h^\prime}\cdot 10^3$,
+			preproc/expr={1000*##1}
 		},
 		columns/4/.style={
-			column name=$\norm{e_h}$,
+			column name=$\norm{e_h} \cdot 10^3$,
+			preproc/expr={1000*##1}
 		},
 		columns/5/.style={
-			column name=$\norm{e}$,
+			column name=$\norm{e} \cdot 10^3$,
+			preproc/expr={1000*##1}
 		},
 		columns/6/.style={
 			column name=${P[u_h]}$,
@@ -160,10 +124,11 @@
 	\end{figure}
 \end{frame}
 
-\begin{frame}{З оцінювачем Остапова-Шинкаренка}
+\begin{frame}[allowframebreaks]
+	{З оцінювачем Остапова-Шинкаренка}
 	Якщо основу для адаптації беремо $e_h^\prime$
 	\centering
-	\scriptsize{\pgfplotstabletypeset[col sep=comma,
+	\scriptsize{\pgfplotstabletypeset[col sep=comma,%
 		columns={0,1,2,3,5,6,7,4},
 		columns/0/.style={
 			column name=\textnumero
@@ -175,13 +140,16 @@
 			column name=$M(h)$
 		},
 		columns/3/.style={
-			column name=$\norm{e_h^\prime}$,
+			column name=$\norm{e_h^\prime} \cdot 10^3$,
+			preproc/expr={1000*##1}
 		},
 		columns/4/.style={
-			column name=$\norm{e_h}$,
+			column name=$\norm{e_h} \cdot 10^3$,
+			preproc/expr={1000*##1}
 		},
 		columns/5/.style={
-			column name=$\norm{e}$,
+			column name=$\norm{e} \cdot 10^3$,
+			preproc/expr={1000*##1}
 		},
 		columns/6/.style={
 			column name=${P[u_h]}$,
@@ -203,4 +171,18 @@
 	 	\centering
 	    \includegraphics[width=0.8\textwidth]{problem2/ost/Plotnb}
 	 \end{figure}
+\end{frame}
+
+
+\begin{frame}{Порівняння}
+	\begin{figure}[H]
+		\begin{columns}
+		 	\begin{column}{0.5\textwidth}
+		 		\includegraphics[width=\textwidth]{problem2/my/Plotnb}
+		 	 \end{column}
+		     \begin{column}{0.5\textwidth}
+		     	\includegraphics[width=\textwidth]{problem2/ost/Plotnb}
+		     \end{column}
+		\end{columns}
+	\end{figure}
 \end{frame}
