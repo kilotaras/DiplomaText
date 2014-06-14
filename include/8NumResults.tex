@@ -5,9 +5,14 @@
 \frame{\sectionpage}
 \begin{frame}{Числові результати}
 	\begin{itemize}
-		\item Наводимо результати роботи запропонованої адаптивної схеми
-		\item порівнюємо адаптацією,побудованою на оцінювачі, запропонованому Остаповим і Шинкаренком\footfullcite{OstShynAee11}.
-		\item оцінювач будується на схожих базисних функціях, але лише на одному трикутнику.
+		\item Наводимо числові результати роботи запропонованої h-адаптивної схеми з оцінювачем
+			\begin{equation}
+				e_h(x)\bigg|_K = \error{ij}+\error{jk}+\error{ki}, \qquad K = A_iA_jA_k.
+			\end{equation}
+		\item Порівнюємо із адаптацією з оцінювачем, запропоновоним Остаповим і Шинкаренком \footfullcite{OstShynAee11}.
+			\begin{equation}
+				e_h(x)\bigg|_K = \lambda_K \big[ \phi_{ij}(x) + \phi_{jk}(x) + \phi_{ki}(x)\big] \qquad K = A_iA_jA_k.
+			\end{equation}
 	\end{itemize}
 \end{frame}
 
